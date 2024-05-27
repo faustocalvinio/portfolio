@@ -1,0 +1,11 @@
+---
+const { aditionalClass } = Astro.props
+---
+
+<section class=`section-container ${aditionalClass}`><slot /></section>
+
+<style>
+   .section-container {
+      @apply mx-auto max-w-[1000px];
+   }
+</style>

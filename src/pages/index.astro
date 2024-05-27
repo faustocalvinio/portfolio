@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../sections/Hero.astro";
+import Experiencia from "../sections/Experiencia.astro";
+import AboutMe from "../sections/SobreMi.astro";
+import Proyectos from "../sections/Proyectos.astro";
+---
+
+<Layout title="Portfolio de Fausto Calviño - Desarrollador y Programador Web">
+  <Navbar />
+  <Hero />
+  <Experiencia />
+  <AboutMe />
+  <Proyectos />
+  <Footer />
+</Layout>
+<style>
+  .section-container {
+    @apply mx-auto max-w-[800px];
+  }
+</style>

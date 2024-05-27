@@ -1,0 +1,65 @@
+---
+import ThemeSwitcher from "./ThemeSwitcher.astro";
+const navItems = [
+   {
+      title: "Experiencia",
+      label: "experiencia",
+      url: "/#experiencia",
+   },
+   {
+      title: "Proyectos",
+      label: "proyectos",
+      url: "/#proyectos",
+   },
+   {
+      title: "Sobre mí",
+      label: "sobre-mi",
+      url: "/#sobre-mi",
+   },
+   {
+      title: "Contacto",
+      label: "contacto",
+      url: "mailto:faustocalvino@gmail.com",
+   },
+];
+---
+
+<nav class="mt-2 fixed mx-auto z-30 w-full">
+   <ul
+      class="flex gap-4 w-fit mx-auto border border-white px-4 py-2 rounded-lg"
+   >
+      {
+         navItems.map((link) => (
+            <li>
+               <a
+                  class="relative block px-2 py-1 transition  hover:text-cyan-500 dark:hover:text-cyan-700"
+                  aria-label={link.label}
+                  href={link.url}
+               >
+                  {link.title}
+               </a>
+            </li>
+         ))
+      }
+
+      <li class="flex items-center">
+         <ThemeSwitcher />
+      </li>
+   </ul>
+</nav>
+<style>
+   a:hover {
+      color: cyan;
+   }
+   ul {
+      animation: nav-shadown 1s linear both;
+      animation-timeline: scroll();
+      animation-range: 0 100px;
+   }
+
+   @keyframes nav-shadown {
+      to {
+         @apply bg-white/50 shadow-lg ring-1 ring-white/10 backdrop-blur dark:bg-gray-800/90;
+      }
+   }
+</style>

@@ -1,10 +1,13 @@
 ---
+import ExpLaboralIcon from "../components/icons/ExpLaboralIcon.astro";
 import GitHub from "../components/icons/GitHub.astro";
 import NextJS from "../components/icons/NextJS.astro";
 import Tailwind from "../components/icons/Tailwind.astro";
 import Link from "../components/Link.astro";
 import LinkButton from "../components/LinkButton.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import AstroIcon from "../components/icons/AstroIcon.astro"
 
 const TECHS = {
    NEXT: {
@@ -17,31 +20,32 @@ const TECHS = {
       class: "bg-[#003159] text-white",
       icon: Tailwind,
    },
+   ASTRO: {
+      name:"Astro",
+      class:"bg-orange-950",
+      icon: AstroIcon,
+   }
 };
 
 const PROJECTS = [
    {
-      title: "Lorem Ipsum",
+      title: "Personal Blog",
       description:
-         "Duis maximus orci a mattis efficitur. Sed tincidunt vestibulum dignissim. Fusce commodo et elit eu fringilla. Donec sollicitudin hendrerit leo, et hendrerit mi pulvinar in. Vivamus id rutrum lacus.",
-      link: "https://google.es/",
+         "Blog where I will be sharing things related to web development as I learn them, with the goal of solidifying my knowledge.",
+      link: "https://blog-fausto.netlify.app/",
       github: "https://github.com/faustocalvinio",
       image: "/blog-fausto.netlify.app_.png",
-      techs: [TECHS.NEXT, TECHS.TAILWIND],
-   },
-   //  {
-   //     title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-   //     description:
-   //        "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-   //     link: "https://adventjs.dev",
-   //     image: "/apuntes/portafolio.jpg",
-   //     techs: [TECHS.NEXT, TECHS.TAILWIND],
-   //  },
+      techs: [TECHS.ASTRO, TECHS.TAILWIND],
+   }
 ];
 ---
 
 <SectionContainer>
-   <div class="flex flex-col gap-y-16 mt-20">
+   <div class="flex gap-2 items-center">
+      <ExpLaboralIcon />
+      <SectionTitle title="Proyectos" />
+   </div>
+   <div class="flex flex-col gap-y-16 mt-2">
       {
          PROJECTS.map(({ image, title, description, techs, link, github }) => (
             <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
@@ -94,23 +98,3 @@ const PROJECTS = [
    </div>
 </SectionContainer>
 
-<!-- ---
-  import Project from "../components/Proyecto.astro";
-  import SectionTitle from "../components/SectionTitle.astro";
-  ---
-  
-  <section class="flex flex-col section-container mt-10 gap-5" id="proyectos">
-    <div class="flex gap-2">
-      <span>ICON</span>
-    <SectionTitle title="Proyectos"/>
-  </div>
-  <Project />
-  <Project />
-  <Project />
-  <Project />
-</section>
-<style>
-  .section-container {
-    @apply mx-auto max-w-[800px];
-  }
-</style> -->

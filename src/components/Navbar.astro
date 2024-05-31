@@ -32,7 +32,7 @@ const navItems = [
          navItems.map((link) => (
             <li>
                <a
-                  class="relative block px-2 py-1 transition  hover:text-cyan-500 dark:hover:text-cyan-700"
+                  class="relative block px-2 transition  hover:text-cyan-500 dark:hover:text-cyan-700 "
                   aria-label={link.label}
                   href={link.url}
                >
@@ -59,7 +59,7 @@ const navItems = [
 
    @keyframes nav-shadown {
       to {
-         @apply bg-white/50 shadow-lg ring-1 ring-white/10 backdrop-blur dark:bg-gray-800/90;
+         @apply  bg-white/20 shadow-lg ring-1 ring-white/10 backdrop-blur dark:bg-gray-800/90;
       }
    }
 </style>

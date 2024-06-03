@@ -2,29 +2,35 @@
 import SectionContainer from "../components/SectionContainer.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import SobreMiIcon from "../components/icons/SobreMiIcon.astro";
-
 ---
-<SectionContainer aditionalClass="mt-12">
-  <div class="flex gap-2 items-center">
-    <SobreMiIcon />
-    <SectionTitle title="Sobre mí"/>
-  </div>
-  <div class="flex w-full">
-    <div class="flex flex-col gap-2">
-      <p> Desde mediados del año 2021 aprendiendo desarrollo web front-end de manera autodidacta. Tengo conocimientos en HTML, CSS, JavaScript y el ecosistema del framework React.
-      </p>
-      <p>
-        Actualmente, estoy ampliando mis conocimientos en NextJS, TailwindCSS ++
-      </p>
-      <p>
-        Me encuentro disponible para cualquier oportunidad laboral relacionada con estas tecnologías.
-      </p>
-    </div>
-    <img
-      class="order-1 object-cover w-64 h-full p-1 bg-white md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl dark:bg-yellow-500/5 ring-1 ring-white/20"
-      src="/thumbnail.jpg"
-      alt=""
-    />
-  </div>
 
+<SectionContainer aditionalClass="mt-12" id="sobre-mi">
+   <div class="flex gap-2 items-center">
+      <SobreMiIcon />
+      <SectionTitle title="Sobre mí" />
+   </div>
+   <div class="flex w-full mt-4">
+      <div class="flex flex-col  md:flex-row">
+         <div class="flex gap-6 flex-col">
+            <p>
+               Desde mediados del año 2021 aprendiendo desarrollo web front-end
+               de manera autodidacta. Tengo conocimientos en HTML, CSS,
+               JavaScript y el ecosistema del framework React.
+            </p>
+            <p>
+               Actualmente, estoy ampliando mis conocimientos en NextJS,
+               TailwindCSS ++
+            </p>
+            <p>
+               Me encuentro disponible para cualquier oportunidad laboral
+               relacionada con estas tecnologías.
+            </p>
+         </div>
+         <img
+            class="order-1 object-cover w-64 h-full p-1 bg-white md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl dark:bg-yellow-500/5 ring-1 ring-white/20"
+            src="/thumbnail.jpg"
+            alt=""
+         />
+      </div>
+   </div>
 </SectionContainer>

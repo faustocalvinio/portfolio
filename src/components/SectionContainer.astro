@@ -1,8 +1,8 @@
 ---
-const { aditionalClass } = Astro.props
+const { aditionalClass, id } = Astro.props
 ---
 
-<section class=`section-container ${aditionalClass}`><slot /></section>
+<section id={id} class=`px-2 md:px-[0px] section-container ${aditionalClass}`><slot /></section>
 
 <style>
    .section-container {

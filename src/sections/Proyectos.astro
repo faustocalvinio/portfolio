@@ -8,6 +8,7 @@ import LinkButton from "../components/LinkButton.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import AstroIcon from "../components/icons/AstroIcon.astro"
+import ProjectsIcon from "../components/icons/ProjectsIcon.astro";
 
 const TECHS = {
    NEXT: {
@@ -31,10 +32,10 @@ const PROJECTS = [
    {
       title: "Personal Blog",
       description:
-         "Blog where I will be sharing things related to web development as I learn them, with the goal of solidifying my knowledge.",
+         "Blog donde compartiré cosas relacionadas con el desarrollo web a medida que las aprenda, con el objetivo de solidificar mis conocimientos.",
       link: "https://blog-fausto.netlify.app/",
       github: "https://github.com/faustocalvinio",
-      image: "/blog-fausto.netlify.app_.png",
+      image: "/screenshots-proyectos/blog-fausto.netlify.app_.png",
       techs: [TECHS.ASTRO, TECHS.TAILWIND],
    }
 ];
@@ -42,7 +43,7 @@ const PROJECTS = [
 
 <SectionContainer>
    <div class="flex gap-2 items-center">
-      <ExpLaboralIcon />
+      <ProjectsIcon />
       <SectionTitle title="Proyectos" />
    </div>
    <div class="flex flex-col gap-y-16 mt-2">

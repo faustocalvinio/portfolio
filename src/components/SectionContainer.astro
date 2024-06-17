@@ -2,10 +2,4 @@
 const { aditionalClass, id } = Astro.props
 ---
 
-<section id={id} class=`px-2 md:px-[0px] section-container ${aditionalClass}`><slot /></section>
-
-<style>
-   .section-container {
-      @apply mx-auto max-w-[900px];
-   }
-</style>
+<section id={id} class=`px-2 md:px-[0px] mx-auto max-w-[1000px]  ${aditionalClass}`><slot /></section>

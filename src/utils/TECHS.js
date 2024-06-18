@@ -1,0 +1,52 @@
+
+import AstroIcon from "../components/icons/AstroIcon.astro";
+import ExpressJS from "../components/icons/ExpressJS.astro";
+import MongoDBIcon from "../components/icons/MongoDBIcon.astro";
+import NextJS from "../components/icons/NextJS.astro";
+import ReactIcon from "../components/icons/ReactIcon.astro";
+import ReactQueryIcon from "../components/icons/ReactQueryIcon.astro";
+import Tailwind from "../components/icons/Tailwind.astro";
+import ZustandIcon from "../components/icons/ZustandIcon.astro";
+
+export const TECHS = {
+    NEXT: {
+       name: "Next.js",
+       class: "bg-black text-white",
+       icon: NextJS,
+    },
+    TAILWIND: {
+       name: "Tailwind CSS",
+       class: "bg-[#003159] text-white",
+       icon: Tailwind,
+    },
+    ASTRO: {
+       name: "Astro",
+       class: "bg-orange-950",
+       icon: AstroIcon,
+    },
+    EXPRESSJS: {
+       name: "Express js",
+       class: "bg-black flex items-center",
+       icon: ExpressJS,
+    },
+    MONGODB: {
+       name: "MongoDB",
+       class: "bg-green-800 flex items-center",
+       icon: MongoDBIcon,
+    },
+    REACT: {
+       name: "React",
+       class: "bg-cyan-900 flex items-center",
+       icon: ReactIcon,
+    },
+    ZUSTAND: {
+      name: "Zustand",
+      class: "bg-amber-950 flex items-center",
+      icon: ZustandIcon,
+   },
+    REACTQUERY: {
+      name: "React Query",
+      class: "bg-red-800 flex items-center",
+      icon: ReactQueryIcon,
+   },
+ };

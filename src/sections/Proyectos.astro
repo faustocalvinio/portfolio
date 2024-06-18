@@ -1,32 +1,12 @@
 ---
-import ExpLaboralIcon from "../components/icons/ExpLaboralIcon.astro";
+
 import GitHub from "../components/icons/GitHub.astro";
-import NextJS from "../components/icons/NextJS.astro";
-import Tailwind from "../components/icons/Tailwind.astro";
+import ProjectsIcon from "../components/icons/ProjectsIcon.astro";
 import Link from "../components/Link.astro";
 import LinkButton from "../components/LinkButton.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import SectionTitle from "../components/SectionTitle.astro";
-import AstroIcon from "../components/icons/AstroIcon.astro"
-import ProjectsIcon from "../components/icons/ProjectsIcon.astro";
-
-const TECHS = {
-   NEXT: {
-      name: "Next.js",
-      class: "bg-black text-white",
-      icon: NextJS,
-   },
-   TAILWIND: {
-      name: "Tailwind CSS",
-      class: "bg-[#003159] text-white",
-      icon: Tailwind,
-   },
-   ASTRO: {
-      name:"Astro",
-      class:"bg-orange-950",
-      icon: AstroIcon,
-   }
-};
+import {TECHS} from "../utils/TECHS";
 
 const PROJECTS = [
    {
@@ -37,7 +17,23 @@ const PROJECTS = [
       github: "https://github.com/faustocalvinio",
       image: "/screenshots-proyectos/blog-fausto.netlify.app_.png",
       techs: [TECHS.ASTRO, TECHS.TAILWIND],
-   }
+   },
+   {
+      title: "Backend API Cars",
+      description: "Proyecto Backend",
+      link: "https://blog-fausto.netlify.app/",
+      github: "https://github.com/faustocalvinio",
+      image: "/screenshots-proyectos/placeholder-proyecto.jpg",
+      techs: [TECHS.EXPRESSJS,TECHS.MONGODB],
+   },
+   {
+      title: "Frontend API Cars",
+      description: "Proyecto Frontend",
+      link: "https://blog-fausto.netlify.app/",
+      github: "https://github.com/faustocalvinio",
+      image: "/screenshots-proyectos/placeholder-proyecto.jpg",
+      techs: [TECHS.REACT,TECHS.ZUSTAND,TECHS.REACTQUERY],
+   },
 ];
 ---
 
@@ -46,7 +42,7 @@ const PROJECTS = [
       <ProjectsIcon />
       <SectionTitle title="Proyectos" />
    </div>
-   <div class="flex flex-col gap-y-16 mt-2">
+   <div class="flex flex-col gap-y-16 mt-4">
       {
          PROJECTS.map(({ image, title, description, techs, link, github }) => (
             <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
@@ -61,7 +57,7 @@ const PROJECTS = [
                      {title}
                   </h3>
                   <div class="flex flex-wrap mt-2">
-                     <ul class="flex flex-row mb-2 gap-x-2">
+                     <ul class="flex flex-row mb-2 gap-x-2 w-full">
                         {techs.map((tag) => (
                            <li>
                               <span
@@ -74,9 +70,9 @@ const PROJECTS = [
                         ))}
                      </ul>
 
-                     <div class="mt-2 text-gray-700 dark:text-gray-400">
+                     <p class="mt-2 w-full text-gray-700 dark:text-gray-400">
                         {description}
-                     </div>
+                     </p>
                      <footer class="flex items-end justify-start mt-4 gap-x-4">
                         {github && (
                            <LinkButton href={github}>
@@ -98,4 +94,3 @@ const PROJECTS = [
       }
    </div>
 </SectionContainer>
-

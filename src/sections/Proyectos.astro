@@ -10,9 +10,10 @@ import { TECHS } from "../utils/TECHS";
 const PROJECTS = [
    {
       title: "Personal Resources",
-      description: "Sitio web con los recursos que he estado guardando relacionados con el desarrollo web.",
-      link: "https://blog-fausto.netlify.app/",
-      github: "https://github.com/faustocalvinio",
+      description:
+         "Sitio web con los recursos que he estado guardando relacionados con el desarrollo web.",
+      link: "https://personal-resources.vercel.app/",
+      github: "https://github.com/faustocalvinio/personal-resources",
       image: "/screenshots-proyectos/personal-resources.vercel.app_.webp",
       techs: [TECHS.ASTRO, TECHS.TAILWIND],
    },
@@ -21,7 +22,7 @@ const PROJECTS = [
       description:
          "Blog donde compartiré cosas relacionadas con el desarrollo web a medida que las aprenda, con el objetivo de solidificar mis conocimientos.",
       link: "https://blog-fausto.netlify.app/",
-      github: "https://github.com/faustocalvinio",
+      github: "https://github.com/faustocalvinio/blog-fausto",
       image: "/screenshots-proyectos/blog-fausto.netlify.app_.png",
       techs: [TECHS.ASTRO, TECHS.TAILWIND],
    },
@@ -35,7 +36,8 @@ const PROJECTS = [
    // },
    {
       title: "Frontend API Cars",
-      description: "Proyecto similar a un dashboard de administracion consumiendo la API creada en el proyecto anterior.",
+      description:
+         "Proyecto similar a un dashboard de administracion consumiendo la API creada en el proyecto anterior.",
       link: "https://blog-fausto.netlify.app/",
       github: "https://github.com/faustocalvinio",
       image: "/screenshots-proyectos/dashboard-frontend-api.webp",
@@ -45,7 +47,7 @@ const PROJECTS = [
 ---
 
 <SectionContainer>
-   <div class="flex gap-2 items-center">
+   <div class="flex gap-3 items-center">
       <ProjectsIcon />
       <SectionTitle title="Proyectos" />
    </div>
@@ -55,7 +57,12 @@ const PROJECTS = [
             <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
                <div class="w-full md:w-1/2">
                   <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-                     <img alt="??" class="w-fit " loading="lazy" src={image} />
+                     <img
+                        alt={`Imagen del proyecto ${title}`}
+                        class="w-fit "
+                        loading="lazy"
+                        src={image}
+                     />
                   </div>
                </div>
 

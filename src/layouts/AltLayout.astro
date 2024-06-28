@@ -1,0 +1,75 @@
+---
+import "@fontsource-variable/onest";
+interface Props {
+   title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="description" content="Astro description" />
+      <meta name="viewport" content="width=device-width" />
+      <link rel="icon" type="image/svg+xml" href="/faviconsvg.svg" />
+      <meta name="generator" content={Astro.generator} />
+      <title>{title}</title>
+   </head>
+   <body class="dark:text-white text-2xl">
+      <!-- <div class=" dark:bg-slate-950"> -->
+      <!-- <div
+            class="h-fit w-full absolute top-0 bottom-0 z-[-2]  bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+         >
+      </div> -->
+      <div
+         class=" absolute inset-0 -z-10 h-fit w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[#000000] dark:bg-[radial-gradient(#ffffff33_1px,#00091d_1px)]"
+      >
+         <slot />
+      </div>
+      
+      <!-- <div
+         class="w-full absolute inset-0 -z-10 size-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"
+      >
+         <div
+            class="h-fit w-full fixed inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"
+         >
+            <slot />
+         </div>
+      </div> -->
+      <!-- </div> -->
+   </body>
+</html>
+<style is:global>
+   html {
+      font-family: "Onest Variable", system-ui, sans-serif;
+      scroll-behavior: smooth;
+   }
+
+   ::selection {
+      color: #fff;
+      background-color: #494949;
+   }
+   .dark ::selection {
+      background-color: #fff;
+      color: #000;
+   }
+   .dark ::-webkit-scrollbar {
+      width: 12px;
+   }
+   .dark ::-webkit-scrollbar-track {
+      background: #111827;
+   }
+   .dark ::-webkit-scrollbar-thumb {
+      background: #414141;
+   }
+   ::-webkit-scrollbar {
+      width: 12px;
+   }
+   ::-webkit-scrollbar-track {
+      background: #ffffff;
+   }
+   ::-webkit-scrollbar-thumb {
+      background: #b3b3b3;
+   }
+</style>

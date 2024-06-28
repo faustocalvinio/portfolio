@@ -11,42 +11,42 @@ import ZustandIcon from "../components/icons/ZustandIcon.astro";
 export const TECHS = {
     NEXT: {
        name: "Next.js",
-       class: "bg-black text-white",
+       class: "border border-black dark:bg-black text-black  dark:text-white",
        icon: NextJS,
     },
     TAILWIND: {
        name: "Tailwind CSS",
-       class: "bg-[#003159] text-white",
+       class: " bg-cyan-100 dark:bg-[#003159] text-black  dark:text-white",
        icon: Tailwind,
     },
     ASTRO: {
        name: "Astro",
-       class: "bg-orange-950",
+       class: "bg-gray-700 dark:bg-orange-950 text-white",
        icon: AstroIcon,
     },
     EXPRESSJS: {
        name: "Express js",
-       class: "bg-black flex items-center",
+       class: "border-black dark:bg-black flex items-center",
        icon: ExpressJS,
     },
     MONGODB: {
        name: "MongoDB",
-       class: "bg-green-800 flex items-center",
+       class: "border-green-800 dark:bg-green-800 flex items-center",
        icon: MongoDBIcon,
     },
     REACT: {
        name: "React",
-       class: "bg-cyan-900 flex items-center",
+       class: "bg-cyan-50 border-cyan-900  dark:bg-cyan-900 flex items-center",
        icon: ReactIcon,
     },
     ZUSTAND: {
       name: "Zustand",
-      class: "bg-amber-950 flex items-center",
+      class: "bg-amber-400 dark:bg-amber-950 flex items-center",
       icon: ZustandIcon,
    },
     REACTQUERY: {
       name: "React Query",
-      class: "bg-red-800 flex items-center",
+      class: "bg-red-200 dark:bg-red-800 flex items-center",
       icon: ReactQueryIcon,
    },
  };

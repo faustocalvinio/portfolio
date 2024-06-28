@@ -6,16 +6,17 @@ import Hero from "../sections/Hero.astro";
 import Experiencia from "../sections/Experiencia.astro";
 import AboutMe from "../sections/SobreMi.astro";
 import Proyectos from "../sections/Proyectos.astro";
+import AltLayout from "../layouts/AltLayout.astro";
 ---
 
-<Layout title="Portfolio de Fausto Calviño - Desarrollador y Programador Web">
+<AltLayout title="Portfolio de Fausto Calviño - Desarrollador y Programador Web">
   <Navbar />
   <Hero />
   <Experiencia />
   <AboutMe />
   <Proyectos />
   <Footer />
-</Layout>
+</AltLayout>
 <style>
   .section-container {
     @apply mx-auto max-w-[800px];

@@ -1,6 +1,6 @@
 # build output
 dist/
-
+.vscode/settings.json
 # generated types
 .astro/
 

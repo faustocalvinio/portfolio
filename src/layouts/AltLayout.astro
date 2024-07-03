@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/onest";
+import MetaTags from "../components/MetaTags.astro";
 interface Props {
    title: string;
 }
@@ -13,47 +14,52 @@ const { title } = Astro.props;
       <meta name="description" content="Astro description" />
       <meta name="viewport" content="width=device-width" />
       <link rel="icon" type="image/svg+xml" href="/faviconsvg.svg" />
+      <MetaTags
+         title="Explora el portfolio de Fausto Calviño, un desarrollador y programador web especializado en tecnologías front-end y back-end. Descubre mis proyectos, habilidades en HTML, CSS, JavaScript, React, Next.js, Node.js y Go, y cómo puedo ayudar a tu equipo a crear soluciones web innovadoras y eficientes."
+         description="Descripción de tu página"
+         url="https://faustocalvinio.dev"
+         image="/screenshot-portfolio.png"
+      />
       <meta name="generator" content={Astro.generator} />
       <title>{title}</title>
    </head>
-   <body class="dark:text-white text-2xl">      
+   <body class="dark:text-white text-2xl">
       <div
-         class=" absolute inset-0 -z-10 h-fit w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[#000000] dark:bg-[radial-gradient(#ffffff26_1px,#00091d_1px)]"
+         class="absolute inset-0 -z-10 h-fit w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[#000000] dark:bg-[radial-gradient(#ffffff26_1px,#00091d_1px)]"
       >
          <slot />
-      </div>      
-   </body>
-</html>
-<style is:global>
-   html {
-      font-family: "Onest Variable", system-ui, sans-serif;
-      scroll-behavior: smooth;
-   }
+      </div>
+   </body><style is:global>
+      html {
+         font-family: "Onest Variable", system-ui, sans-serif;
+         scroll-behavior: smooth;
+      }
 
-   ::selection {
-      color: #fff;
-      background-color: #494949;
-   }
-   .dark ::selection {
-      background-color: #fff;
-      color: #000;
-   }
-   .dark ::-webkit-scrollbar {
-      width: 12px;
-   }
-   .dark ::-webkit-scrollbar-track {
-      background: #111827;
-   }
-   .dark ::-webkit-scrollbar-thumb {
-      background: #414141;
-   }
-   ::-webkit-scrollbar {
-      width: 12px;
-   }
-   ::-webkit-scrollbar-track {
-      background: #ffffff;
-   }
-   ::-webkit-scrollbar-thumb {
-      background: #b3b3b3;
-   }
-</style>
+      ::selection {
+         color: #fff;
+         background-color: #494949;
+      }
+      .dark ::selection {
+         background-color: #fff;
+         color: #000;
+      }
+      .dark ::-webkit-scrollbar {
+         width: 12px;
+      }
+      .dark ::-webkit-scrollbar-track {
+         background: #111827;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+         background: #414141;
+      }
+      ::-webkit-scrollbar {
+         width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+         background: #ffffff;
+      }
+      ::-webkit-scrollbar-thumb {
+         background: #b3b3b3;
+      }
+   </style>
+</html>

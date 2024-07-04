@@ -9,16 +9,17 @@ import Proyectos from "../sections/Proyectos.astro";
 import AltLayout from "../layouts/AltLayout.astro";
 ---
 
-<AltLayout title="Portfolio de Fausto Calviño - Desarrollador y Programador Web">
-  <Navbar />
-  <Hero />
-  <Experiencia />
-  <AboutMe />
-  <Proyectos />
-  <Footer />
+<AltLayout
+   url="https://faustocalvinio.netlify.app/"
+   image="/screenshot-portfolio.png"
+   description="Explora el portfolio de Fausto Calviño, un desarrollador y programador web especializado en tecnologías front-end y back-end. Descubre mis proyectos, habilidades en HTML, CSS, JavaScript, React, Next.js, Node.js y Go, y cómo puedo ayudar a tu equipo a crear soluciones web innovadoras y eficientes."
+   title="Portfolio de Fausto Calviño - Desarrollador y Programador Web"
+>
+   <Navbar />
+   <Hero />
+   <Experiencia />
+   <AboutMe />
+   <Proyectos />
+   <Footer />
 </AltLayout>
-<style>
-  .section-container {
-    @apply mx-auto max-w-[800px];
-  }
-</style>
+

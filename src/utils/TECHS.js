@@ -26,12 +26,12 @@ export const TECHS = {
     },
     EXPRESSJS: {
        name: "Express js",
-       class: "border-black dark:bg-black flex items-center",
+       class: "border-black bg-black text-white flex items-center",
        icon: ExpressJS,
     },
     MONGODB: {
        name: "MongoDB",
-       class: "border-green-800 dark:bg-green-800 flex items-center",
+       class: "border-green-800 bg-green-300 dark:bg-green-800 flex items-center",
        icon: MongoDBIcon,
     },
     REACT: {

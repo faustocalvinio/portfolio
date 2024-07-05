@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import PageMeta from "../components/PageMeta.astro";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import Hero from "../sections/Hero.astro";
@@ -7,14 +7,11 @@ import Experiencia from "../sections/Experiencia.astro";
 import AboutMe from "../sections/SobreMi.astro";
 import Proyectos from "../sections/Proyectos.astro";
 import AltLayout from "../layouts/AltLayout.astro";
+import { SITE_TITLE } from "../config";
 ---
 
-<AltLayout
-   url="https://faustocalvinio.netlify.app/"
-   image="https://faustocalvinio.netlify.app/screenshot-portfolio.png"
-   description="Explora el portfolio de Fausto Calviño, un desarrollador y programador web especializado en tecnologías front-end y back-end. Descubre mis proyectos, habilidades en HTML, CSS, JavaScript, React, Next.js, Node.js y Go, y cómo puedo ayudar a tu equipo a crear soluciones web innovadoras y eficientes."
-   title="Portfolio de Fausto Calviño - Desarrollador y Programador Web"
->
+<AltLayout>
+   <PageMeta title={SITE_TITLE} slot="meta" />
    <Navbar />
    <Hero />
    <Experiencia />
@@ -22,4 +19,3 @@ import AltLayout from "../layouts/AltLayout.astro";
    <Proyectos />
    <Footer />
 </AltLayout>
-

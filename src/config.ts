@@ -6,7 +6,7 @@ export const MY_NAME = "Fausto Calviño";
 const siteUrl = `${import.meta.env.SITE}`;
 console.log(siteUrl)
 if (!siteUrl) {
-  console.log()
+  console.log(siteUrl)
   throw new Error('La variable de entorno SITE no está definida.');
 }
 

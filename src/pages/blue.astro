@@ -6,11 +6,11 @@ import Hero from "../sections/Hero.astro";
 import Experiencia from "../sections/Experiencia.astro";
 import AboutMe from "../sections/SobreMi.astro";
 import Proyectos from "../sections/Proyectos.astro";
-import Layout from "../layouts/Layout.astro";
+import AltLayout from "../layouts/Layout.astro";
 import { SITE_TITLE } from "../config";
 ---
 
-<Layout>
+<AltLayout>
    <PageMeta title={SITE_TITLE} slot="meta" />
    <Navbar />
    <Hero />
@@ -18,4 +18,4 @@ import { SITE_TITLE } from "../config";
    <AboutMe />
    <Proyectos />
    <Footer />
-</Layout>
+</AltLayout>

@@ -16,12 +16,12 @@ const { title, description, image, url } = Astro.props;
       <link rel="icon" type="image/svg+xml" href="/faviconsvg.svg" />
       <slot name="meta" />
    </head>
-   <body class="dark:text-white text-2xl">
+   <body class="dark:text-white text-[18px] leading-snug">
       <div
-         class="absolute inset-0 -z-10 h-fit w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[#000000] dark:bg-[radial-gradient(#ffffff26_1px,#00091d_1px)]"
+         class="fixed  overflow-visible -z-10 h-screen w-full bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)] dark:bg-slate-950 dark:bg-[radial-gradient(circle_500px_at_50%_200px,#2A2A2A,transparent)]"
       >
-         <slot />
-      </div>
+   </div>
+   <slot />
    </body>
 </html>
 <style is:global>

@@ -2,12 +2,16 @@
 import SectionContainer from "../components/SectionContainer.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import ExpLaboralIcon from "../components/icons/ExpLaboralIcon.astro";
+interface Props {
+   TEXTS: string[];
+}
+const { TEXTS } = Astro.props;
 ---
 
 <SectionContainer aditionalClass="flex flex-col" id="experiencia">
    <div class="flex gap-3 items-center">
       <ExpLaboralIcon />
-      <SectionTitle title="Experiencia" />
+      <SectionTitle title={TEXTS[0]} />
    </div>
    <ol class="mt-4 relative border-s border-gray-500 dark:border-gray-700">
       <li class="mb-10 ms-4">
@@ -17,17 +21,13 @@ import ExpLaboralIcon from "../components/icons/ExpLaboralIcon.astro";
          </div>
          <time
             class="mb-1 font-normal leading-none text-gray-400 dark:text-gray-500"
-            >Mayo 2022 - Abril 2023</time
+            >{TEXTS[1]}</time
          >
          <h3 class="font-semibold text-gray-900 dark:text-white">
-            WordPress Developer
+            {TEXTS[2]}
          </h3>
          <p class="mb-4 font-normal text-gray-600 dark:text-gray-400">
-            Tengo un año de experiencia desarrollando sitios web
-            autogestionables con WordPress, creando landing pages, e-commerce
-            con WooCommerce y portales de noticias. Utilizo Elementor para
-            diseñar interfaces atractivas y funcionales, facilitando a mis
-            clientes la gestión y actualización de sus sitios web.
+            {TEXTS[3]}
          </p>
       </li>
       <li class="ms-4">
@@ -37,16 +37,13 @@ import ExpLaboralIcon from "../components/icons/ExpLaboralIcon.astro";
          </div>
          <time
             class="mb-1 font-normal leading-none text-gray-400 dark:text-gray-500"
-            >Julio 2021 - Actualmente</time
+            >{TEXTS[4]}</time
          >
          <h3 class="font-semibold text-gray-900 dark:text-white">
-            Sumando conocimientos sobre el desarrollo web
+            {TEXTS[5]}
          </h3>
          <p class="mb-4 font-normal text-gray-600 dark:text-gray-400">
-            Desde julio de 2021, he estado metido de lleno en el desarrollo web,
-            aprendiendo tanto backend como frontend. Este tiempo ha sido súper
-            importante para mí, ya que he podido mejorar mucho y aprender sobre
-            varias tecnologías y herramientas.
+            {TEXTS[6]}
          </p>
       </li>
    </ol>

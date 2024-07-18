@@ -2,33 +2,30 @@
 import SectionContainer from "../components/SectionContainer.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import SobreMiIcon from "../components/icons/SobreMiIcon.astro";
+interface Props {
+   TEXTS: string[];
+}
+const { TEXTS } = Astro.props;
 ---
 
-<SectionContainer aditionalClass="" id="sobre-mi">
+<SectionContainer aditionalClass="" id={TEXTS[4]}>
    <div class="flex gap-3 items-center">
       <SobreMiIcon />
-      <SectionTitle title="Sobre mí" />
+      <SectionTitle title={TEXTS[0]} />
    </div>
    <div class="flex w-full mt-4">
       <div class="flex flex-col gap-4 md:gap-8 items-center lg:flex-row">
          <div class="flex gap-6 flex-col text-gray-800 dark:text-white">
             <p>
-               Desde mediados de 2021, he estado aprendiendo desarrollo web de
-               manera autodidacta. Poseo sólidos conocimientos en HTML, CSS,
-               JavaScript, así como en el ecosistema de los frameworks React y
-               Next.js.
+               {TEXTS[1]}
             </p>
 
             <p>
-               Actualmente, estoy ampliando mis habilidades en Node.js, Go y
-               bases de datos. Puedes conocer más sobre mis proyectos y
-               experiencia en mi portfolio web fausto.dev.ar.
+               {TEXTS[2]}
             </p>
 
             <p>
-               Estoy disponible para oportunidades laborales, tanto remotas como
-               híbridas, en la ciudad de Madrid, y estoy entusiasmado por
-               colaborar en proyectos que involucren estas tecnologías.
+               {TEXTS[3]}
             </p>
          </div>
          <img

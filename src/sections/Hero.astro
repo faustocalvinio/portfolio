@@ -3,6 +3,10 @@ import HeroLink from "../components/HeroLink.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Gmail from "../components/icons/Gmail.astro";
 import PeaceIcon from "../components/icons/PeaceIcon.astro";
+const { TEXTS } = Astro.props;
+interface Props {
+   TEXTS: string[];
+}
 ---
 
 <SectionContainer aditionalClass="mt-0">
@@ -23,17 +27,16 @@ import PeaceIcon from "../components/icons/PeaceIcon.astro";
                <div
                   class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-800 bg-green-100 rounded-full dark:bg-gray-900 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap"
                >
-                  Disponible para trabajar
+                  {TEXTS[0]}
                </div>
             </span>
-         </div>     
+         </div>
       </div>
       <h1 class="text-5xl gap-4 flex items-center font-bold">
-         Hola, soy Fausto <PeaceIcon />
+         {TEXTS[1]}<PeaceIcon />
       </h1>
       <p class="my-4">
-          Un desarrollador web con tres años de experiencia en el ecosistema de aplicaciones desarrolladas con React, Next.js y aplicaciones de backend basadas en NodeJS. 
-          
+         {TEXTS[2]}
       </p>
       <div class="flex gap-2 flex-wrap">
          <HeroLink href="https://www.linkedin.com/in/faustocalvinio/">
@@ -66,7 +69,7 @@ import PeaceIcon from "../components/icons/PeaceIcon.astro";
          </HeroLink>
          <HeroLink href="mailto:faustocalvino@outlook.com">
             <Gmail />
-            Correo
+            {TEXTS[3]}
          </HeroLink>
       </div>
    </div>

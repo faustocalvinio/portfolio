@@ -1,11 +1,22 @@
 ---
-import Layout from '../../layouts/OldLayout.astro';
+import PageMeta from "../../components/PageMeta.astro";
+import Footer from "../../components/Footer.astro";
+import Navbar from "../../components/Navbar.astro";
+import Hero from "../../sections/Hero.astro";
+import Experiencia from "../../sections/Experiencia.astro";
+import AboutMe from "../../sections/SobreMi.astro";
+import Proyectos from "../../sections/Proyectos.astro";
+import Layout from "../../layouts/Layout.astro";
+import { SITE_TITLE } from "../../config";
+import { EXPERIENCIA_EN, HERO_EN, SOBREMI_EN } from "../../data/english";
 ---
 
-<Layout title="Portfolio Fausto Calviño - Web Developer">
-    <main>
-		<h1>
-			English
-		</h1>
-	</main>
+<Layout>
+   <PageMeta title={SITE_TITLE} slot="meta" />
+   <Navbar LANG="EN" />
+   <Hero TEXTS={HERO_EN} />
+   <Experiencia TEXTS={EXPERIENCIA_EN} />
+   <AboutMe TEXTS={SOBREMI_EN} />
+   <Proyectos />
+   <Footer />
 </Layout>

@@ -1,5 +1,5 @@
 ---
-import PageMeta from "../components/PageMeta.astro";
+import PageMetaEs from "../components/PageMetaEs.astro";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import Hero from "../sections/Hero.astro";
@@ -7,12 +7,12 @@ import Experiencia from "../sections/Experiencia.astro";
 import AboutMe from "../sections/SobreMi.astro";
 import Proyectos from "../sections/Proyectos.astro";
 import Layout from "../layouts/Layout.astro";
-import { SITE_TITLE } from "../config";
+import { SITE_TITLE } from "../config-es";
 import { EXPERIENCIA_ES, HERO_ES, SOBREMI_ES } from "../data/espanol";
 ---
 
 <Layout>
-   <PageMeta title={SITE_TITLE} slot="meta" />
+   <PageMetaEs title={SITE_TITLE} slot="meta" />
    <Navbar LANG="ES" />
    <Hero TEXTS={HERO_ES} />
    <Experiencia TEXTS={EXPERIENCIA_ES} />

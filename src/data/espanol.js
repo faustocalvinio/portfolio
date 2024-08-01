@@ -23,4 +23,6 @@ export const SOBREMI_ES = [
   "sobre-mi"
 ];
 
-const NAVBAR_ES = ["Experiencia", "Sobre mí", "Proyectos", "Contacto"];
+export const NAVBAR_ES = ["Experiencia", "Sobre mí", "Proyectos", "Contacto"];
+
+export const FOOTER_ES=["Inspirado por "," Código fuente en este ","repositorio"]

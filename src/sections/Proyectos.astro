@@ -7,9 +7,13 @@ import SectionContainer from "../components/SectionContainer.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import { TECHS } from "../utils/TECHS";
 interface Props {
-   
+   lang: "es" | "en";
 }
-const PROJECTS = [
+const {lang} = Astro.props;
+let PROJECTS=[]
+
+if (lang ==="es") {
+   PROJECTS = [
    {
       title: "Personal Resources",
       description:
@@ -20,7 +24,7 @@ const PROJECTS = [
       techs: [TECHS.ASTRO, TECHS.TAILWIND],
    },
    {
-      title: "Personal Blog",
+      title: "Blog Personal",
       description:
          "Blog donde compartiré cosas relacionadas con el desarrollo web a medida que las aprenda, con el objetivo de solidificar mis conocimientos.",
       link: "https://blog-fausto.netlify.app/",
@@ -28,6 +32,50 @@ const PROJECTS = [
       image: "/screenshots-proyectos/blog-fausto.netlify.app_.webp",
       techs: [TECHS.ASTRO, TECHS.TAILWIND],
    },
+   {
+      title: "Frontend API Cars",
+      description:
+      "Proyecto similar a un dashboard de administracion consumiendo la API creada en el proyecto anterior.",
+      link: "https://frontend-api-cars-fcc.netlify.app/",
+      github: "https://github.com/faustocalvinio/frontend-api-cars",
+      image: "/screenshots-proyectos/dashboard-frontend-api.webp",
+      techs: [TECHS.REACT, TECHS.ZUSTAND, TECHS.REACTQUERY],
+   },
+];
+} else{
+   PROJECTS = [
+   {
+      title: "Personal Resources",
+      description:
+         "Website with the resources I have been saving related to web development.",
+      link: "https://personal-resources.vercel.app/",
+      github: "https://github.com/faustocalvinio/personal-resources",
+      image: "/screenshots-proyectos/personal-resources.vercel.app_.webp",
+      techs: [TECHS.ASTRO, TECHS.TAILWIND],
+   },
+   {
+      title: "Personal Blog",
+      description:
+         "Blog where I will share things related to web development as I learn them, in order to solidify my knowledge.",
+      link: "https://blog-fausto.netlify.app/",
+      github: "https://github.com/faustocalvinio/blog-fausto",
+      image: "/screenshots-proyectos/blog-fausto.netlify.app_.webp",
+      techs: [TECHS.ASTRO, TECHS.TAILWIND],
+   },
+   {
+      title: "Frontend API Cars",
+      description:
+      "Project similar to an administration dashboard consuming the API created in the previous project.",
+      link: "https://frontend-api-cars-fcc.netlify.app/",
+      github: "https://github.com/faustocalvinio/frontend-api-cars",
+      image: "/screenshots-proyectos/dashboard-frontend-api.webp",
+      techs: [TECHS.REACT, TECHS.ZUSTAND, TECHS.REACTQUERY],
+   },
+];
+}
+
+
+
       // {
       //    title: "Backend API Cars",
       //    description: "Proyecto Backend",
@@ -36,16 +84,6 @@ const PROJECTS = [
       //    image: "https://res.cloudinary.com/dc6mrv5cb/image/upload/v1720198231/portfolio-fausto/placeholder-proyecto_fywqyp.webp",
       //    techs: [TECHS.EXPRESSJS, TECHS.MONGODB],
       // },
-   {
-      title: "Frontend API Cars",
-      description:
-         "Proyecto similar a un dashboard de administracion consumiendo la API creada en el proyecto anterior.",
-      link: "https://frontend-api-cars-fcc.netlify.app/",
-      github: "https://github.com/faustocalvinio/frontend-api-cars",
-      image: "/screenshots-proyectos/dashboard-frontend-api.webp",
-      techs: [TECHS.REACT, TECHS.ZUSTAND, TECHS.REACTQUERY],
-   },
-];
 ---
 
 <SectionContainer id="proyectos">

@@ -6,17 +6,24 @@ import Hero from "../sections/Hero.astro";
 import Experiencia from "../sections/Experiencia.astro";
 import AboutMe from "../sections/SobreMi.astro";
 import Proyectos from "../sections/Proyectos.astro";
+import Skills from "../sections/Skills.astro";
 import Layout from "../layouts/Layout.astro";
 import { SITE_TITLE } from "../config-es";
-import { EXPERIENCIA_ES, HERO_ES, SOBREMI_ES } from "../data/espanol";
+import {
+   EXPERIENCIA_ES,
+   HERO_ES,
+   SOBREMI_ES,
+   FOOTER_ES,
+} from "../data/espanol";
 ---
 
-<Layout>
+<Layout lang={"es"}>
    <PageMetaEs title={SITE_TITLE} slot="meta" />
    <Navbar LANG="ES" />
    <Hero TEXTS={HERO_ES} />
    <Experiencia TEXTS={EXPERIENCIA_ES} />
    <AboutMe TEXTS={SOBREMI_ES} />
-   <Proyectos />
-   <Footer />
+   <Proyectos lang="es"/>
+   <!-- <Skills /> -->
+   <Footer TEXTS={FOOTER_ES} />
 </Layout>

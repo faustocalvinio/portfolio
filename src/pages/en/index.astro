@@ -8,15 +8,20 @@ import AboutMe from "../../sections/SobreMi.astro";
 import Proyectos from "../../sections/Proyectos.astro";
 import Layout from "../../layouts/Layout.astro";
 import { SITE_TITLE } from "../../config-en";
-import { EXPERIENCIA_EN, HERO_EN, SOBREMI_EN } from "../../data/english";
+import {
+   EXPERIENCIA_EN,
+   HERO_EN,
+   SOBREMI_EN,
+   FOOTER_EN,
+} from "../../data/english";
 ---
 
-<Layout>
+<Layout lang={"en"}>
    <PageMetaEn title={SITE_TITLE} slot="meta" />
    <Navbar LANG="EN" />
    <Hero TEXTS={HERO_EN} />
    <Experiencia TEXTS={EXPERIENCIA_EN} />
    <AboutMe TEXTS={SOBREMI_EN} />
-   <Proyectos />
-   <Footer />
+   <Proyectos lang="en"/>
+   <Footer TEXTS={FOOTER_EN} />
 </Layout>

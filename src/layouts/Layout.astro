@@ -5,11 +5,12 @@ interface Props {
    description?: string;
    image?: string;
    url?: string;
+   lang: "es" | "en";
 }
-const { title, description, image, url } = Astro.props;
+const { title, description, image, url, lang } = Astro.props;
 ---
 
-<html lang="es">
+<html lang={lang}>
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width" />
@@ -33,7 +34,7 @@ const { title, description, image, url } = Astro.props;
 
    ::selection {
       color: #fff;
-      background-color: #494949;
+      background-color: #000;
    }
    .dark ::selection {
       background-color: #fff;

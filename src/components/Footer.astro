@@ -1,14 +1,17 @@
 ---
-
+interface Props {
+   TEXTS: string[];
+}
+const { TEXTS } = Astro.props;
 ---
 
 <footer class=" mx-auto max-w-[800px] mt-4 pb-4 text-center">
   <p>
-    Inspirado por <a class="text-blue-800 dark:text-blue-400" href="https://porfolio.dev/"
+    {TEXTS[0]}<a class="text-blue-800 dark:text-blue-400" href="https://porfolio.dev/"
       target="_blank">porfolio.dev</a
-    >. Código fuente en este <a
+    >.{TEXTS[1]}<a
       class="text-blue-800 dark:text-blue-400"
-      href="https://github.com/faustocalvinio/fausto-portfolio">repositorio</a
+      href="https://github.com/faustocalvinio/fausto-portfolio">{TEXTS[2]}</a
     >.
   </p>
 </footer>

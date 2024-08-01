@@ -21,4 +21,6 @@ export const SOBREMI_EN = [
   "I am available for job opportunities, both remote and hybrid, in the city of Madrid, and I am excited to collaborate on projects involving these technologies.",
   "about-me"
 ];
-const NAVBAR_EN=["Experience","About me","Projects","Contact"]
+export const NAVBAR_EN=["Experience","About me","Projects","Contact"]
+
+export const FOOTER_EN=["Inspired by "," Source code in this ","repository"]

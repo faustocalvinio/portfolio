@@ -5,7 +5,7 @@ import {
    SITE_DESCRIPTION,
    SITE_URL,
    TWITTER_HANDLE,
-} from "../config-es";
+} from "../config-en";
 
 export interface Props {
    title?: string;
@@ -18,10 +18,10 @@ const { meta, og, twitter } = getPageMeta({
    title: title || SITE_TITLE,
    description: description || SITE_DESCRIPTION,
    baseUrl: SITE_URL,
-   ogImageAbsoluteUrl: `${SITE_URL}/screenshot-portfolio.jpg`,
-   ogImageAltText: "Screenshot of Fausto Calvino portfolio",
-   ogImageWidth: 2500,
-   ogImageHeight: 1243,
+   ogImageAbsoluteUrl: `${SITE_URL}/ss-portfolio-en.jpeg`,
+   ogImageAltText: "Screenshot of Fausto Calviño's portfolio",
+   ogImageWidth: 1440,
+   ogImageHeight: 900,
    siteOwnerTwitterHandle: TWITTER_HANDLE,
    contentAuthorTwitterHandle: TWITTER_HANDLE,
 });

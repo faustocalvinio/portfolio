@@ -7,7 +7,7 @@ interface Props {
    url?: string;
    lang: "es" | "en";
 }
-import ScrollToTop from "../components/ScrollToTop.astro"
+import ScrollToTop from "../components/ScrollToTop.astro";
 const { title, description, image, url, lang } = Astro.props;
 ---
 
@@ -20,11 +20,11 @@ const { title, description, image, url, lang } = Astro.props;
    </head>
    <body class="dark:text-white text-[18px] leading-snug">
       <div
-         class="fixed  overflow-visible -z-10 h-screen w-full bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)] dark:bg-slate-950 dark:bg-[radial-gradient(circle_500px_at_50%_200px,#2A2A2A,transparent)]"
+         class="fixed overflow-visible -z-10 h-screen w-full bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)] dark:bg-slate-950 dark:bg-[radial-gradient(circle_500px_at_50%_200px,#2A2A2A,transparent)]"
       >
-   </div>
-   <slot />
-   <ScrollToTop />
+      </div>
+      <slot />
+      <ScrollToTop />
    </body>
 </html>
 <style is:global>
@@ -33,7 +33,15 @@ const { title, description, image, url, lang } = Astro.props;
       scroll-behavior: smooth;
       scroll-padding-top: 60px;
    }
-
+   body {
+      cursor: url("/cursor-png.png"), auto;
+   }
+   a,
+   button,
+   input,
+   textarea {
+      cursor: url(/hand-pointer.png), pointer;
+   }
    ::selection {
       color: #fff;
       background-color: #000;

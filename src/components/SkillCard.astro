@@ -1,0 +1,113 @@
+---
+const { name, color,brandColor } = Astro.props;
+const customProperties = { "--color-brand": brandColor } 
+---
+
+<span class={`card`} style={customProperties}>
+   <div class={`wrapper`}>
+      <div class={`iconWrapper text-[${brandColor}] transition-all`}><slot name="icon" /></div>
+      <span class={`skillName`}>{name}</span>
+   </div>
+</span>
+
+<!-- 
+<div class=`flex flex-col justify-center items-center bg-slate-800 ${color} transition-all`>
+   <slot name="icon" />
+   <h1>{name}</h1>
+</div> -->
+
+<style>
+   .card {
+      --line-offset: 1px;
+      position: relative;
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      aspect-ratio: 1 / 1;
+      background-color: var(--background-color);
+      border-radius: 8px;
+      overflow: hidden;
+      user-select: none;
+      outline: none;
+      transition: transform 150ms;
+   }
+
+   .card:hover {
+      transform: translateY(-4px);
+      user-select: none;
+      outline: none;
+   }
+
+   .card::after {
+      content: "";
+      position: absolute;
+      background-color: var(--color-stroke);
+      user-select: none;
+      outline: none;
+   }
+
+   .card::before {
+      content: "";
+      outline: none;
+      user-select: none;
+   }
+
+   .card:active {
+      transform: translateY(0);
+      user-select: none;
+      outline: none;
+   }
+
+   .card:focus {
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+   }
+
+   .iconWrapper {
+      transition:
+         color var(--theme-transition-duration),
+         transform var(--theme-transition-duration);
+      user-select: none;
+      outline: none;
+   }
+
+   .card:hover .iconWrapper {
+      color: var(--color-brand);
+      transform: translateY(-8px);
+      user-select: none;
+      outline: none;
+   }
+
+   .skillName {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      opacity: 0;
+      transition:
+         opacity 150ms,
+         transform 150ms;
+      user-select: none;
+      outline: none;
+   }
+
+   @media (hover: hover) {
+      .card:hover .skillName {
+         opacity: 1;
+         transform: translateX(-50%) translateY(0);
+         user-select: none;
+         outline: none;
+      }
+   }
+
+   .card:focus-visible,
+   .iconWrapper:focus-visible,
+   .skillName:focus-visible {
+      outline: none;
+      box-shadow: none;
+      -webkit-tap-highlight-color: transparent;
+   }
+</style>

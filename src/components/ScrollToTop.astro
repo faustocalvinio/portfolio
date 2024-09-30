@@ -1,5 +1,5 @@
 ---
-// ScrollToTop.astro
+
 ---
 
 <button
@@ -9,8 +9,8 @@
 >
    <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="40"
-      height="40"
+      width="35"
+      height="35"
       viewBox="0 0 24 24"
       ><path
          fill="currentColor "
@@ -20,7 +20,6 @@
 </button>
 
 <script>
-   // Función para mostrar/ocultar el botón basado en el scroll
    window.addEventListener("scroll", () => {
       const scrollToTopBtn = document.getElementById("scrollToTopBtn");
       if (window.scrollY > 200) {
@@ -32,7 +31,6 @@
       }
    });
 
-   // Función para hacer scroll hasta el tope de la página
    document.getElementById("scrollToTopBtn").addEventListener("click", () => {
       window.scrollTo({
          top: 0,

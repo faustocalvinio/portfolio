@@ -4,6 +4,17 @@ import SectionContainer from "../components/SectionContainer.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import DockerIcon from "../components/icons/DockerIcon.astro";
 import SkillCard from "../components/SkillCard.astro";
+import ReactBig from "../components/icons/ReactBig.astro";
+import GitIcon from "../components/icons/GitIcon.astro";
+import NodeIcon from "../components/icons/NodeIcon.astro";
+import TsIcon from "../components/icons/TsIcon.astro";
+import PgIcon from "../components/icons/PgIcon.astro";
+import PostmanIcon from "../components/icons/PostmanIcon.astro";
+import MongoDBSmallIcon from "../components/icons/MongoDBSmallIcon.astro";
+import ExpressBigIcon from "../components/icons/ExpressBigIcon.astro";
+import GithubBigIcon from "../components/icons/GithubBigIcon.astro";
+import TailwindBigIcon from "../components/icons/TailwindBigIcon.astro";
+import NextBigIcon from "../components/icons/NextBigIcon.astro";
 
 ---
 
@@ -13,26 +24,45 @@ import SkillCard from "../components/SkillCard.astro";
       <SectionTitle title="Skills" />
       
    </div>
-   <div class={`skillWrapper grid grid-cols-4`}>
+   <div class={`skillWrapper mt-6 grid grid-cols-2  md:grid-cols-2 lg:grid-cols-4 justify-between border border-slate-800 dark:border-slate-400`}>
       
-      <SkillCard key="docker" name="Docker" brandColor="#ff0000">
+      <SkillCard key="docker" name="Docker" brandColor="#2496ED">
          <DockerIcon slot="icon"/>
       </SkillCard>
-      <SkillCard key="docker" name="Docker" brandColor="#ff0000">
-         <DockerIcon slot="icon"/>
+      <SkillCard key="React" name="React" brandColor="#61DAFB">
+         <ReactBig slot="icon"/>
       </SkillCard>
-      <SkillCard key="docker" name="Docker" brandColor="#00BFFF">
-         <DockerIcon slot="icon"/>
+      <SkillCard key="Git" name="Git" brandColor="#F05032">
+         <GitIcon slot="icon"/>
       </SkillCard>
-      <SkillCard key="docker" name="Docker" brandColor="#ff0000">
-         <DockerIcon slot="icon"/>
+      <SkillCard key="Nodejs" name="Node.js" brandColor="#339933">
+         <NodeIcon slot="icon"/>
       </SkillCard>
-      <SkillCard key="docker" name="Docker" brandColor="#ff0000">
-         <DockerIcon slot="icon"/>
+      <SkillCard key="TypeScript" name="TypeScript" brandColor="#3178C6">
+         <TsIcon slot="icon"/>
       </SkillCard>
-      <SkillCard key="docker" name="Docker" brandColor="#ff0000">
-         <DockerIcon slot="icon"/>
+      <SkillCard key="PostgreSQL" name="PostgreSQL" brandColor="#336791">
+         <PgIcon slot="icon"/>
       </SkillCard>
+      <SkillCard key="Postman" name="Postman" brandColor="#FF6C37">
+         <PostmanIcon slot="icon"/>
+      </SkillCard>
+      <SkillCard key="MongoDB" name="MongoDB" brandColor="#47A248">
+         <MongoDBSmallIcon slot="icon"/>
+      </SkillCard>
+      <SkillCard key="Expressjs" name="Express.js" brandColor="#000000">
+         <ExpressBigIcon slot="icon"/>
+      </SkillCard>
+      <SkillCard key="Github" name="Github" brandColor="#181717">
+         <GithubBigIcon slot="icon"/>
+      </SkillCard>
+      <SkillCard key="Tailwind" name="TailwindCSS" brandColor="#38B2AC">
+         <TailwindBigIcon slot="icon"/>
+      </SkillCard>
+      <SkillCard key="Nextjs" name="Next.js" brandColor="#000000">
+         <NextBigIcon slot="icon"/>
+      </SkillCard>
+      
    </div>
    
 </SectionContainer>
@@ -44,9 +74,7 @@ import SkillCard from "../components/SkillCard.astro";
     --min-inline-size: 100px;
     
     max-inline-size: 800px;
-    margin: 32px auto;
     padding: 16px;
-    border: 1px solid var(--color-stroke);
     border-radius: 8px;
     overflow: hidden;
     transition: border-color var(--theme-transition-duration);

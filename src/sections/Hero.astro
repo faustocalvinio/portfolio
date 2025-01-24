@@ -3,6 +3,7 @@ import HeroLink from "../components/HeroLink.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Gmail from "../components/icons/Gmail.astro";
 import PeaceIcon from "../components/icons/PeaceIcon.astro";
+import CVIcon from "../components/icons/CVIcon.astro";
 const { TEXTS } = Astro.props;
 interface Props {
    TEXTS: string[];
@@ -70,6 +71,10 @@ interface Props {
          <HeroLink href="mailto:faustocalvino@outlook.com">
             <Gmail />
             {TEXTS[3]}
+         </HeroLink>
+         <HeroLink href={TEXTS[5]}>
+            <CVIcon />
+            {TEXTS[4]}
          </HeroLink>
       </div>
    </div>

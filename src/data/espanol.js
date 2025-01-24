@@ -3,6 +3,8 @@ export const HERO_ES = [
   "Hola, soy Fausto",
   "Un desarrollador web con tres años de experiencia en el ecosistema de aplicaciones desarrolladas con React, Next.js y aplicaciones de backend basadas en NodeJS.",
   "Correo",
+  "CV",
+  "https://faustocalvinio.website/CV/ES/CV-Fausto-Calviño.pdf"
 ];
 
 export const EXPERIENCIA_ES = [

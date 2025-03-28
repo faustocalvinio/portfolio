@@ -18,7 +18,7 @@ export const TECHS = {
   },
   TAILWIND: {
     name: "Tailwind CSS",
-    class: " bg-cyan-100 dark:bg-[#003159] text-white  dark:text-white",
+    class: " bg-cyan-100 dark:bg-[#003159] text-gray-800  dark:text-white",
     icon: Tailwind,
   },
   ASTRO: {

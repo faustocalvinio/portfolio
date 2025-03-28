@@ -1,15 +1,15 @@
 export const HERO_ES = [
   "Disponible para trabajar",
   "Hola, soy Fausto",
-  "Un desarrollador web con tres años de experiencia en el ecosistema de aplicaciones desarrolladas con React, Next.js y aplicaciones de backend basadas en NodeJS.",
+  "Un desarrollador web full-stack con tres años de experiencia en el ecosistema de aplicaciones desarrolladas con React, Next.js y aplicaciones de backend basadas en NodeJS.",
   "Correo",
   "CV",
-  "https://faustocalvinio.website/CV/ES/CV-Fausto-Calviño.pdf"
+  "https://faustocalvinio.website/CV_Fausto_Calviño.pdf"
 ];
 
 export const EXPERIENCIA_ES = [
   "Experiencia",
-  "Mayo 2022 - Abril 2023",
+  "Mayo 2022 - Abril 2024",
   "WordPress Developer",
   "Tengo un año de experiencia desarrollando sitios web autogestionables con WordPress, creando landing pages, e-commerce con WooCommerce y portales de noticias. Utilizo Elementor para diseñar interfaces atractivas y funcionales, facilitando a mis clientes la gestión y actualización de sus sitios web.",
   "Julio 2021 - Actualmente",

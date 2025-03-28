@@ -15,6 +15,9 @@ import ExpressBigIcon from "../components/icons/ExpressBigIcon.astro";
 import GithubBigIcon from "../components/icons/GithubBigIcon.astro";
 import TailwindBigIcon from "../components/icons/TailwindBigIcon.astro";
 import NextBigIcon from "../components/icons/NextBigIcon.astro";
+import WordpressBigIcon from "../components/icons/WordpressBigIcon.astro";
+import NestJsIcon from "../components/icons/NestJsIcon.astro";
+import ElementorBigIcon from "../components/icons/ElementorBigIcon.astro";
 ---
 
 <SectionContainer>
@@ -28,7 +31,11 @@ import NextBigIcon from "../components/icons/NextBigIcon.astro";
       <SkillCard key="React" name="React" brandColor="#61DAFB">
          <ReactBig slot="icon" />
       </SkillCard>
-      <SkillCard key="Nextjs" name="Next.js" brandColor="#000000 dark:text-white">
+      <SkillCard
+         key="Nextjs"
+         name="Next.js"
+         brandColor="#000000 dark:text-white"
+      >
          <NextBigIcon slot="icon" />
       </SkillCard>
       <SkillCard key="TypeScript" name="TypeScript" brandColor="#3178C6">
@@ -52,7 +59,11 @@ import NextBigIcon from "../components/icons/NextBigIcon.astro";
       <SkillCard key="Git" name="Git" brandColor="#F05032">
          <GitIcon slot="icon" />
       </SkillCard>
-      <SkillCard key="Github" name="Github" brandColor="#181717 dark:text-#181717">
+      <SkillCard
+         key="Github"
+         name="Github"
+         brandColor="#181717 dark:text-#181717"
+      >
          <GithubBigIcon slot="icon" />
       </SkillCard>
       <SkillCard key="Postman" name="Postman" brandColor="#FF6C37">
@@ -60,6 +71,15 @@ import NextBigIcon from "../components/icons/NextBigIcon.astro";
       </SkillCard>
       <SkillCard key="docker" name="Docker" brandColor="#2496ED">
          <DockerIcon slot="icon" />
+      </SkillCard>
+      <SkillCard key="wordpress" name="WordPress" brandColor="#2496ED">
+         <WordpressBigIcon slot="icon" />
+      </SkillCard>
+      <SkillCard key="elementor" name="Elementor" brandColor="#e11d48">
+         <ElementorBigIcon slot="icon" />
+      </SkillCard>
+      <SkillCard key="nestjs" name="NestJS" brandColor="#df234f">
+         <NestJsIcon slot="icon" />
       </SkillCard>
    </div>
 </SectionContainer>

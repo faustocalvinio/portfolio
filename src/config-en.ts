@@ -4,5 +4,5 @@ export const SITE_DESCRIPTION =
 export const TWITTER_HANDLE = "@faustocalvinio";
 export const MY_NAME = "Fausto Calviño";
 
-const BASE_URL = new URL("https://faustocalvinio.website/");
+const BASE_URL = new URL(import.meta.env.PORTFOLIO_URL);
 export const SITE_URL = BASE_URL.origin;

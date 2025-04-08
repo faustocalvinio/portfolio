@@ -8,7 +8,7 @@ interface Props {
 const { TEXTS } = Astro.props;
 ---
 
-<SectionContainer aditionalClass="flex flex-col" id="experiencia">
+<SectionContainer aditionalClass="flex flex-col" id=`${TEXTS[0].toLowerCase()}`>
    <div class="flex gap-3 items-center">
       <ExpLaboralIcon />
       <SectionTitle title={TEXTS[0]} />

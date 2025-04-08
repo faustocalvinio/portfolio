@@ -4,7 +4,7 @@ export const HERO_ES = [
   "Un desarrollador web full-stack con tres años de experiencia en el ecosistema de aplicaciones desarrolladas con React, Next.js y aplicaciones de backend basadas en NodeJS.",
   "Correo",
   "CV",
-  `${import.meta.env.PORTFOLIO_URL}CV_Fausto_Calviño.pdf`
+  `${import.meta.env.PORTFOLIO_URL}CV_Fausto_Calviño.pdf`,
 ];
 
 export const EXPERIENCIA_ES = [
@@ -22,9 +22,13 @@ export const SOBREMI_ES = [
   "Desde mediados de 2021, he estado aprendiendo desarrollo web de manera autodidacta. Poseo sólidos conocimientos en HTML, CSS, JavaScript, así como en el ecosistema de los frameworks React y Next.js.",
   "Actualmente, estoy ampliando mis habilidades en Node.js, Go y bases de datos. Puedes conocer más sobre mis proyectos y experiencia en mi portfolio web.",
   "Estoy disponible para oportunidades laborales, tanto remotas como híbridas, en la ciudad de Madrid, y estoy entusiasmado por colaborar en proyectos que involucren estas tecnologías.",
-  "sobre-mi"
+  "sobre-mi",
 ];
 
 export const NAVBAR_ES = ["Experiencia", "Sobre mí", "Proyectos", "Contacto"];
 
-export const FOOTER_ES=["Inspirado por "," Código fuente en este ","repositorio"]
+export const FOOTER_ES = [
+  "Inspirado por ",
+  " Código fuente en este ",
+  "repositorio",
+];

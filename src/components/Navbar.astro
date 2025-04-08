@@ -1,4 +1,6 @@
 ---
+const url = new URL(Astro.request.url);
+
 import ThemeSwitcher from "./ThemeSwitcher.astro";
 let navItems = [];
 //    {
@@ -54,17 +56,17 @@ if (LANG === "ES") {
       {
          title: "Experiencia",
          label: "experiencia",
-         url: "/#experiencia",
+         url: "#experiencia",
       },
       {
          title: "Proyectos",
          label: "proyectos",
-         url: "/#proyectos",
+         url: "#proyectos",
       },
       {
          title: "Sobre mí",
          label: "sobre-mi",
-         url: "/#sobre-mi",
+         url: "#sobre-mi",
       },
       {
          title: "Contacto",
@@ -77,17 +79,17 @@ if (LANG === "ES") {
       {
          title: "Experience",
          label: "experience",
-         url: "/#experience",
+         url: "#experience",
       },
       {
          title: "Projects",
          label: "projects",
-         url: "/#projects",
+         url: "#projects",
       },
       {
          title: "About me",
          label: "about-me",
-         url: "/#about-me",
+         url: "#about-me",
       },
       {
          title: "Contact",

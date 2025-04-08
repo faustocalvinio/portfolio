@@ -107,10 +107,10 @@ if (lang === "es") {
 }
 ---
 
-<SectionContainer id="proyectos">
+<SectionContainer id=`${lang === "en" ? "projects" : "proyectos"}`>
    <div class="flex gap-3 items-center">
       <ProjectsIcon />
-      <SectionTitle title="Proyectos" />
+      <SectionTitle title=`${lang === "en" ? "Projects" : "Proyectos"}` />
    </div>
    <div class="flex flex-col gap-y-16 mt-4">
       {

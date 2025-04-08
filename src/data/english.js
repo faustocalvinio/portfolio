@@ -4,7 +4,8 @@ export const HERO_EN = [
   "A full-stack web developer with three years of experience in the ecosystem of applications developed with React, Next.js, and backend applications based on NodeJS.",
   "Email",
   "Resume",
- "https://faustocalvinio.website/Resume_Fausto_Calviño.pdf" 
+  `${import.meta.env.PORTFOLIO_URL}/Resume_Fausto_Calviño.pdf`,
+//  "https://faustocalvinio.website/Resume_Fausto_Calviño.pdf" 
 ];
 
 export const EXPERIENCIA_EN = [

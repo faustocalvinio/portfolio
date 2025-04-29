@@ -1,14 +1,24 @@
 ---
-// src/pages/outlook.astro
+import PageMetaEn from "../components/PageMetaEn.astro";
+import PageMetaEs from "../components/PageMetaEs.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Redireccionando a Outlook</title>
-    <meta http-equiv="refresh" content="0; url=mailto:faustocalvino@outlook.com" />
-  </head>
-  <body>
-    <p>Redireccionando a Outlook...</p>
-  </body>
-</html>
+<PageMetaEs title="Redireccionando a Outlook" />
+<meta http-equiv="refresh" content="0; url=mailto:faustocalvino@outlook.com" />
+<Layout lang="en">
+   <div
+      class="flex px-4 md:px-0 h-screen max-w-[800px] mx-auto flex-col items-center justify-center gap-3"
+   >
+      <h1 class="text-4xl font-bold text-gray-800 mb-8">
+        Redireccionando a Outlook
+      </h1>
+      
+      
+   </div>
+</Layout>
+<style>
+   a {
+      @apply inline-block rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white hover:bg-blue-600;
+   }
+</style>

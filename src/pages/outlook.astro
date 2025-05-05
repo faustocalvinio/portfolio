@@ -1,20 +1,47 @@
 ---
-import PageMetaEn from "../components/PageMetaEn.astro";
 import PageMetaEs from "../components/PageMetaEs.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<PageMetaEs title="Redireccionando a Outlook" />
-<meta http-equiv="refresh" content="0; url=mailto:faustocalvino@outlook.com" />
+<PageMetaEs title="Fausto Calviño Outlook" />
 <Layout lang="en">
    <div
       class="flex px-4 md:px-0 h-screen max-w-[800px] mx-auto flex-col items-center justify-center gap-3"
    >
-      <h1 class="text-4xl font-bold text-gray-800 mb-8">
-        Redireccionando a Outlook
+      <div class="mb-6 w-full flex justify-center">
+         <a
+            href="/"
+            class=" flex flex-row rounded-lg bg-gray-100 px-4 py-2 font-medium text-gray-700 hover:bg-gray-200 transition"
+         >
+             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#ffffff" d="M11.336 2.253a1 1 0 0 1 1.328 0l9 8a1 1 0 0 1-1.328 1.494L20 11.45V19a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7.55l-.336.297a1 1 0 0 1-1.328-1.494zM6 9.67V19h3v-5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5h3V9.671l-6-5.333zM13 19v-4h-2v4z"/></svg>
+         </a>
+      </div>
+      <h1 class="text-4xl font-bold mb-2 text-center">Outlook:</h1>
+      <h1 class="text-2xl  mb-2 text-center">
+         faustocalvino@outlook.com
       </h1>
-      
-      
+      <div class="flex flex-col md:flex-row gap-4 w-full justify-center">
+         <a
+            href="mailto:faustocalvino@outlook.com"
+            class="inline-block rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white hover:bg-blue-600 text-center"
+         >
+         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#fff" d="M13 19c0-.34.04-.67.09-1H4V8l8 5l8-5v5.09c.72.12 1.39.37 2 .72V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h9.09c-.05-.33-.09-.66-.09-1m7-13l-8 5l-8-5zm0 16v-2h-4v-2h4v-2l3 3z"/></svg>
+         </a>
+         <button
+            type="button"
+            class="inline-block rounded-lg bg-gray-200 px-6 py-3 font-semibold text-gray-800 hover:bg-gray-300 text-center"
+         >
+         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></g></svg>
+         </button>
+      </div>
+
+      <div id="success" class="hidden mt-4">
+         <p class="text-green-500 text-sm text-center">
+            Email address copied to clipboard!
+         </p>
+      </div>
+
+   
    </div>
 </Layout>
 <style>
@@ -22,3 +49,18 @@ import Layout from "../layouts/Layout.astro";
       @apply inline-block rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white hover:bg-blue-600;
    }
 </style>
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+      const copyButton = document.querySelector("button");
+      const successMessage = document.getElementById("success");
+      copyButton.addEventListener("click", function () {
+         navigator.clipboard.writeText("faustocalvino@outlook.com").then(() => {
+            // alert("Email address copied to clipboard!");
+            successMessage.classList.remove("hidden");
+            setTimeout(() => {
+               successMessage.classList.add("hidden");
+            }, 4000); // Hide after 2 seconds
+         });
+      });
+   });
+</script>

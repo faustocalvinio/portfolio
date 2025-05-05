@@ -4,12 +4,12 @@ export const HERO_EN = [
   "A full-stack web developer with three years of experience in the ecosystem of applications developed with React, Next.js, and backend applications based on NodeJS.",
   "Email",
   "Resume",
-  `${import.meta.env.PORTFOLIO_URL}/Resume_Fausto_Calviño.pdf`,
+  `${import.meta.env.PORTFOLIO_URL}Resume_Fausto_Calvino.pdf`,
 ];
 
 export const EXPERIENCIA_EN = [
   "Experience",
-  "May 2022 - April 2024",
+  "May 2022 - November 2024",
   "WordPress Developer",
   "I have one year of experience developing self-managed websites with WordPress, creating landing pages, e-commerce sites with WooCommerce, and news portals. I use Elementor to design attractive and functional interfaces, making it easy for my clients to manage and update their websites.",
   "July 2021 - Nowadays",

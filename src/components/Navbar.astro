@@ -1,6 +1,7 @@
 ---
 const url = new URL(Astro.request.url);
 
+import LanguageDropdown from "./LanguageDropdown.astro";
 import ThemeSwitcher from "./ThemeSwitcher.astro";
 let navItems = [];
 //    {
@@ -104,7 +105,7 @@ if (LANG === "ES") {
    class="mt-7 md:mt-2 absolute right-3 md:fixed mx-auto z-30 md:w-full md:flex"
 >
    <ul
-      class="flex gap-4 w-fit mx-auto border border-gray-400 dark:border-white  dark:bg-transparent px-3 text-lg py-2 rounded-lg"
+      class="flex gap-4 w-fit mx-auto border border-gray-400 dark:border-white  dark:bg-transparent px-3 text-lg py-2 rounded-lg items-center "
    >
       {
          navItems.map((link) => (
@@ -123,6 +124,7 @@ if (LANG === "ES") {
       <li class="items-center md:flex">
          <ThemeSwitcher />
       </li>
+       <LanguageDropdown/>
    </ul>
 </nav>
 <style>

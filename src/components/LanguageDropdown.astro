@@ -1,0 +1,67 @@
+---
+import LanguageIcon from "./icons/LanguageIcon.astro";
+---
+
+<section>
+   <div
+      id="start"
+      class="relative border-gray-400 cursor-pointer flex items-center gap-2"
+   >
+      <LanguageIcon />
+      <span id="current">EN</span>
+   </div>
+   <div
+      id="options"
+      class="absolute hidden mt-2 bg-white border border-gray-400 rounded-lg shadow-lg"
+   >
+      <ul class="flex flex-col" id="language-options">
+         <!-- <li class="hover:bg-gray-200 cursor-pointer">
+            <a href="/en" class="py-2 px-4">EN</a>
+         </li>
+         <li class="hover:bg-gray-200 cursor-pointer">
+            <a href="/" class="py-2 px-4">ES</a>
+         </li> -->
+      </ul>
+   </div>
+</section>
+
+<script>
+   const currentLangText = document.getElementById("current");
+   const currentLang = window.location.pathname.endsWith("/en") ? "EN" : "ES";
+   currentLangText.textContent = currentLang;
+   const languageOptions = document.getElementById("language-options");
+
+   document.addEventListener("DOMContentLoaded", () => {
+      const engItem = document.createElement("li");
+      const engLink = document.createElement("a");
+      engLink.href = "/en";
+      engLink.className = "py-2 px-4 hover:bg-gray-200 cursor-pointer";
+      engLink.textContent = "EN";
+      engItem.appendChild(engLink);
+      const espItem = document.createElement("li");
+      const espLink = document.createElement("a");
+      espLink.href = "/";
+      espLink.className = "py-2 px-4 hover:bg-gray-200 cursor-pointer";
+      espLink.textContent = "ES";
+      espItem.appendChild(espLink);
+      if (currentLang === "EN") {
+         languageOptions.append(engItem);
+         languageOptions.append(espItem);
+      } else {
+         languageOptions.append(espItem);
+         languageOptions.append(engItem);
+      }
+   });
+
+   const showElement = document.getElementById("start");
+   const options = document.getElementById("options");
+   showElement.addEventListener("mouseenter", () => {
+      const options = document.getElementById("options");
+      options.classList.toggle("hidden");
+   });
+
+   options.addEventListener("mouseleave", () => {
+      const options = document.getElementById("options");
+      options.classList.toggle("hidden");
+   });
+</script>

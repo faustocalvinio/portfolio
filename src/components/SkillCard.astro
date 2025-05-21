@@ -1,20 +1,16 @@
 ---
-const { name, color,brandColor } = Astro.props;
-const customProperties = { "--color-brand": brandColor } 
+const { name, color, brandColor } = Astro.props;
+const customProperties = { "--color-brand": brandColor };
 ---
 
 <span class={`card`} style={customProperties}>
    <div class={`wrapper`}>
-      <div class={`iconWrapper text-[${brandColor}] transition-all`}><slot name="icon" /></div>
+      <div class={`iconWrapper text-[${brandColor}] transition-all`}>
+         <slot name="icon" />
+      </div>
       <span class={`skillName`}>{name}</span>
    </div>
 </span>
-
-<!-- 
-<div class=`flex flex-col justify-center items-center bg-slate-800 ${color} transition-all`>
-   <slot name="icon" />
-   <h1>{name}</h1>
-</div> -->
 
 <style>
    .card {

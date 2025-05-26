@@ -151,13 +151,13 @@ if (lang === "es") {
                         {github && (
                            <LinkButton href={github}>
                               <GitHub class="size-6" />
-                              Código
+                              {lang === "es" ? "Código" : "Source Code"}
                            </LinkButton>
                         )}
                         {link && (
                            <LinkButton href={link}>
                               <Link class="size-4" />
-                              Ver en vivo
+                              {lang === "es" ? "Ver en vivo" : "Live Demo"}
                            </LinkButton>
                         )}
                      </footer>

@@ -5,6 +5,9 @@ import * as path from "path";
 
   const page = await browser.newPage();
   await page.setViewport({ width: 1440, height: 900 });
+  await page.emulateMediaFeatures([
+    { name: "prefers-color-scheme", value: "light" }
+  ]);
   await page.goto("http://localhost:4321");
   const screenshotPath = path.join(
     process.cwd(),
@@ -15,6 +18,9 @@ import * as path from "path";
 
   const page2 = await browser.newPage();
   await page2.setViewport({ width: 1440, height: 900 });
+  await page2.emulateMediaFeatures([
+    { name: "prefers-color-scheme", value: "light" }
+  ]);
   await page2.goto("http://localhost:4321/en");
   const screenshotPath2 = path.join(
     process.cwd(),

@@ -67,7 +67,8 @@ const customProperties = { "--color-brand": brandColor };
       outline: none;
    }
 
-   .card:hover .iconWrapper {
+   .card:hover .iconWrapper,
+   .display-mobile .iconWrapper {
       color: var(--color-brand);
       transform: translateY(-8px);
       user-select: none;
@@ -106,4 +107,18 @@ const customProperties = { "--color-brand": brandColor };
       box-shadow: none;
       -webkit-tap-highlight-color: transparent;
    }
+   .display-mobile .skillName {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+      user-select: none;
+      outline: none;
+   }
 </style>
+<script>
+   if (window.innerWidth < 767) {
+      const cards = document.querySelectorAll(".card");
+      cards.forEach((card) => {
+         card.classList.add("display-mobile");
+      });
+   }
+</script>

@@ -12,7 +12,7 @@ import LanguageIcon from "./icons/LanguageIcon.astro";
    </div>
    <div
       id="options"
-      class="absolute hidden mt-2 bg-white  md:bg-white/90  dark:bg-gray-900/90 border rounded-lg shadow-lg"
+      class="absolute hidden mt-2 bg-white md:bg-white/90 dark:bg-gray-900/90 border rounded-lg shadow-lg"
    >
       <ul class="flex flex-col" id="language-options">
          <!-- <li class="hover:bg-gray-200 cursor-pointer">
@@ -27,7 +27,11 @@ import LanguageIcon from "./icons/LanguageIcon.astro";
 
 <script>
    const currentLangText = document.getElementById("current");
-   const currentLang = (window.location.pathname.endsWith("/en") || window.location.pathname.endsWith("/en/") )? "EN" : "ES";
+   const currentLang =
+      window.location.pathname.endsWith("/en") ||
+      window.location.pathname.endsWith("/en/")
+         ? "EN"
+         : "ES";
    currentLangText.textContent = currentLang;
    const languageOptions = document.getElementById("language-options");
 
@@ -59,6 +63,12 @@ import LanguageIcon from "./icons/LanguageIcon.astro";
       const options = document.getElementById("options");
       options.classList.toggle("hidden");
    });
+   if (window.matchMedia("(max-width: 767px)").matches) {
+      showElement.addEventListener("click", () => {
+         const options = document.getElementById("options");
+         options.classList.toggle("hidden");
+      });
+   }
 
    options.addEventListener("mouseleave", () => {
       const options = document.getElementById("options");

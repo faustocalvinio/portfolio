@@ -15,7 +15,7 @@ let PROJECTS = [];
 if (lang === "es") {
    PROJECTS = [
       {
-         title: "Personal Resources",
+         title: "CurateHub",
          description:
             "Sitio web con los recursos que he estado guardando relacionados con el desarrollo web.",
          link: "https://personal-resources.vercel.app/",
@@ -32,21 +32,20 @@ if (lang === "es") {
          image: "/screenshots-proyectos/blog-fausto.netlify.app_.webp",
          techs: [TECHS.ASTRO, TECHS.TAILWIND],
       },
-      // {
-      //    title: "Frontend API Cars",
-      //    description:
-      //       "Proyecto similar a un dashboard de administracion consumiendo la API creada en el proyecto anterior.",
-      //    link: "https://frontend-api-cars-fcc.netlify.app/",
-      //    github: "https://github.com/faustocalvinio/frontend-api-cars",
-      //    image: "/screenshots-proyectos/dashboard-frontend-api.webp",
-      //    techs: [TECHS.REACT, TECHS.ZUSTAND, TECHS.REACTQUERY],
-      // },
       {
-         title: "Backend API Cars",
+         title: "Cars Management Fullstack App",
+         description:
+            "Desarrollé una aplicación Full Stack dividida en un backend y un frontend. El backend es una API RESTful en Node.js con Express y MongoDB, que permite operaciones CRUD sobre datos de autos e incluye autenticación con JWT. El frontend, construido con React y Tailwind CSS, ofrece un panel de administración desde el cual se pueden gestionar los autos consumiendo dicha API.",
+         github: "https://github.com/faustocalvinio/backend-api-cars",
+         image: "/screenshots-proyectos/placeholder-proyecto.webp",
+         techs: [TECHS.EXPRESSJS, TECHS.MONGODB, TECHS.TYPESCRIPT, TECHS.REACT, TECHS.TAILWIND],
+      },
+      {
+         title: "QR Ticketing Fullstack App",
          description:
             "API construida con Express.js y utiliza Mongoose para interactuar con una base de datos MongoDB. La autenticación se maneja utilizando JSON Web Tokens (JWT).",
          github: "https://github.com/faustocalvinio/backend-api-cars",
-         image: "/screenshots-proyectos/backend-ai-generated.webp",
+         image: "/screenshots-proyectos/ss-qr-client.png",
          techs: [TECHS.EXPRESSJS, TECHS.MONGODB, TECHS.TYPESCRIPT],
       },
       {
@@ -55,13 +54,13 @@ if (lang === "es") {
             "Desarrollo de Ecommerce con WooCommerce y WordPress con integración de Pagos con PayPal",
          image: "/screenshots-proyectos/product-battiart.webp",
          link: "https://battiart.com/",
-         techs: [TECHS.WORDPRESS,TECHS.ELEMENTOR],
+         techs: [TECHS.WORDPRESS,TECHS.ELEMENTOR,TECHS.WOOCOMERCE],
       },
    ];
 } else {
    PROJECTS = [
       {
-         title: "Personal Resources",
+         title: "CurateHub",
          description:
             "Website with the resources I have been saving related to web development.",
          link: "https://personal-resources.vercel.app/",
@@ -78,30 +77,31 @@ if (lang === "es") {
          image: "/screenshots-proyectos/blog-fausto.netlify.app_.webp",
          techs: [TECHS.ASTRO, TECHS.TAILWIND],
       },
-      // {
-      //    title: "Frontend API Cars",
-      //    description:
-      //       "Project similar to an administration dashboard consuming the API created in the previous project.",
-      //    link: "https://frontend-api-cars-fcc.netlify.app/",
-      //    github: "https://github.com/faustocalvinio/frontend-api-cars",
-      //    image: "/screenshots-proyectos/dashboard-frontend-api.webp",
-      //    techs: [TECHS.REACT, TECHS.ZUSTAND, TECHS.REACTQUERY],
-      // },
-      {
-         title: "Backend API Cars",
+    
+       {
+         title: "Cars Management Fullstack App",
          description:
-            "API built with Express.js and uses Mongoose to interact with a MongoDB database. Authentication is handled using JSON Web Tokens (JWT).",
+            "Desarrollé una aplicación Full Stack dividida en un backend y un frontend. El backend es una API RESTful en Node.js con Express y MongoDB, que permite operaciones CRUD sobre datos de autos e incluye autenticación con JWT. El frontend, construido con React y Tailwind CSS, ofrece un panel de administración desde el cual se pueden gestionar los autos consumiendo dicha API.",
          github: "https://github.com/faustocalvinio/backend-api-cars",
-         image: "/screenshots-proyectos/backend-ai-generated.webp",
+         image: "/screenshots-proyectos/placeholder-proyecto.webp",
+         techs: [TECHS.EXPRESSJS, TECHS.MONGODB, TECHS.TYPESCRIPT, TECHS.REACT, TECHS.TAILWIND],
+      },
+{
+         title: "QR Ticketing Fullstack App",
+         description:
+            "API construida con Express.js y utiliza Mongoose para interactuar con una base de datos MongoDB. La autenticación se maneja utilizando JSON Web Tokens (JWT).",
+         github: "https://github.com/faustocalvinio/backend-api-cars",
+         image: "/screenshots-proyectos/ss-qr-client.png",
          techs: [TECHS.EXPRESSJS, TECHS.MONGODB, TECHS.TYPESCRIPT],
       },
+
       {
          title: "Battiart",
          description:
             "Ecommerce Development with WooCommerce, WordPress and PayPal Payment Integration",
          image: "/screenshots-proyectos/product-battiart.webp",
          link: "https://battiart.com/",
-         techs: [TECHS.WORDPRESS,TECHS.ELEMENTOR],
+         techs: [TECHS.WORDPRESS,TECHS.ELEMENTOR,TECHS.WOOCOMERCE],
       },
    ];
 }
@@ -112,9 +112,9 @@ if (lang === "es") {
       <ProjectsIcon />
       <SectionTitle title=`${lang === "en" ? "Projects" : "Proyectos"}` />
    </div>
-   <div class="flex flex-col gap-y-16 mt-4">
+   <div class="flex flex-col  gap-y-16 mt-4">
       {
-         PROJECTS.map(({ image, title, description, techs, link, github }) => (
+         PROJECTS.map(({ image, title, description, techs, link, github, frontend, backend }) => (
             <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
                <div class="w-full md:w-1/2">
                   <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -131,7 +131,7 @@ if (lang === "es") {
                      {title}
                   </h3>
                   <div class="flex flex-wrap mt-2">
-                     <ul class="flex flex-row mb-2 gap-x-2 w-full">
+                     <ul class="flex flex-row flex-wrap  mb-2 gap-2 w-full">
                         {techs.map((tag) => (
                            <li>
                               <span

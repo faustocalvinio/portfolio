@@ -7,6 +7,7 @@ import ReactIcon from "../components/icons/ReactIcon.astro";
 import ReactQueryIcon from "../components/icons/ReactQueryIcon.astro";
 import Tailwind from "../components/icons/Tailwind.astro";
 import TypescriptIcon from "../components/icons/TypescriptIcon.astro";
+import WooComerceIcon from "../components/icons/WooComerceIcon.astro";
 import WordpressIcon from "../components/icons/WordpressIcon.astro";
 import ZustandIcon from "../components/icons/ZustandIcon.astro";
 
@@ -65,5 +66,10 @@ export const TECHS = {
     name: "Elementor",
     class: "bg-pink-900 dark:bg-pink-900 flex items-center text-white",
     icon: ElementorIcon,
+  },
+  WOOCOMERCE: {
+    name: "WooComerce",
+    class: "bg-[#873EFF] flex items-center text-white",
+    icon: WooComerceIcon,
   },
 };

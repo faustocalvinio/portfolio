@@ -37,8 +37,15 @@ if (lang === "es") {
          description:
             "Desarrollé una aplicación Full Stack dividida en un backend y un frontend. El backend es una API RESTful en Node.js con Express y MongoDB, que permite operaciones CRUD sobre datos de autos e incluye autenticación con JWT. El frontend, construido con React y Tailwind CSS, ofrece un panel de administración desde el cual se pueden gestionar los autos consumiendo dicha API.",
          github: "https://github.com/faustocalvinio/backend-api-cars",
+         link: "https://frontend-api-cars-fcc.netlify.app",
          image: "/screenshots-proyectos/placeholder-proyecto.webp",
-         techs: [TECHS.EXPRESSJS, TECHS.MONGODB, TECHS.TYPESCRIPT, TECHS.REACT, TECHS.TAILWIND],
+         techs: [
+            TECHS.EXPRESSJS,
+            TECHS.MONGODB,
+            TECHS.TYPESCRIPT,
+            TECHS.REACT,
+            TECHS.TAILWIND,
+         ],
       },
       {
          title: "QR Ticketing Fullstack App",
@@ -47,6 +54,7 @@ if (lang === "es") {
          github: "https://github.com/faustocalvinio/backend-api-cars",
          image: "/screenshots-proyectos/ss-qr-client.png",
          techs: [TECHS.EXPRESSJS, TECHS.MONGODB, TECHS.TYPESCRIPT],
+         link: "https://frontend-ticketing-app.netlify.app/",
       },
       {
          title: "Battiart",
@@ -54,7 +62,7 @@ if (lang === "es") {
             "Desarrollo de Ecommerce con WooCommerce y WordPress con integración de Pagos con PayPal",
          image: "/screenshots-proyectos/product-battiart.webp",
          link: "https://battiart.com/",
-         techs: [TECHS.WORDPRESS,TECHS.ELEMENTOR,TECHS.WOOCOMERCE],
+         techs: [TECHS.WORDPRESS, TECHS.ELEMENTOR, TECHS.WOOCOMERCE],
       },
    ];
 } else {
@@ -77,21 +85,29 @@ if (lang === "es") {
          image: "/screenshots-proyectos/blog-fausto.netlify.app_.webp",
          techs: [TECHS.ASTRO, TECHS.TAILWIND],
       },
-    
-       {
+
+      {
          title: "Cars Management Fullstack App",
          description:
             "Desarrollé una aplicación Full Stack dividida en un backend y un frontend. El backend es una API RESTful en Node.js con Express y MongoDB, que permite operaciones CRUD sobre datos de autos e incluye autenticación con JWT. El frontend, construido con React y Tailwind CSS, ofrece un panel de administración desde el cual se pueden gestionar los autos consumiendo dicha API.",
          github: "https://github.com/faustocalvinio/backend-api-cars",
          image: "/screenshots-proyectos/placeholder-proyecto.webp",
-         techs: [TECHS.EXPRESSJS, TECHS.MONGODB, TECHS.TYPESCRIPT, TECHS.REACT, TECHS.TAILWIND],
+         techs: [
+            TECHS.EXPRESSJS,
+            TECHS.MONGODB,
+            TECHS.TYPESCRIPT,
+            TECHS.REACT,
+            TECHS.TAILWIND,
+         ],
+         link: "https://frontend-api-cars-fcc.netlify.app",
       },
-{
+      {
          title: "QR Ticketing Fullstack App",
          description:
             "API construida con Express.js y utiliza Mongoose para interactuar con una base de datos MongoDB. La autenticación se maneja utilizando JSON Web Tokens (JWT).",
          github: "https://github.com/faustocalvinio/backend-api-cars",
          image: "/screenshots-proyectos/ss-qr-client.png",
+         link: "https://frontend-ticketing-app.netlify.app/",
          techs: [TECHS.EXPRESSJS, TECHS.MONGODB, TECHS.TYPESCRIPT],
       },
 
@@ -101,7 +117,7 @@ if (lang === "es") {
             "Ecommerce Development with WooCommerce, WordPress and PayPal Payment Integration",
          image: "/screenshots-proyectos/product-battiart.webp",
          link: "https://battiart.com/",
-         techs: [TECHS.WORDPRESS,TECHS.ELEMENTOR,TECHS.WOOCOMERCE],
+         techs: [TECHS.WORDPRESS, TECHS.ELEMENTOR, TECHS.WOOCOMERCE],
       },
    ];
 }
@@ -112,59 +128,70 @@ if (lang === "es") {
       <ProjectsIcon />
       <SectionTitle title=`${lang === "en" ? "Projects" : "Proyectos"}` />
    </div>
-   <div class="flex flex-col  gap-y-16 mt-4">
+   <div class="flex flex-col gap-y-16 mt-4">
       {
-         PROJECTS.map(({ image, title, description, techs, link, github, frontend, backend }) => (
-            <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-               <div class="w-full md:w-1/2">
-                  <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-                     <img
-                        alt={`Imagen del proyecto ${title}`}
-                        class="w-fit aspect-video object-cover"
-                        src={image}
-                     />
+         PROJECTS.map(
+            ({
+               image,
+               title,
+               description,
+               techs,
+               link,
+               github,
+               frontend,
+               backend,
+            }) => (
+               <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+                  <div class="w-full md:w-1/2">
+                     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                        <img
+                           alt={`Imagen del proyecto ${title}`}
+                           class="w-fit aspect-video object-cover"
+                           src={image}
+                        />
+                     </div>
                   </div>
-               </div>
 
-               <div class="w-full md:w-1/2 md:max-w-lg">
-                  <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-                     {title}
-                  </h3>
-                  <div class="flex flex-wrap mt-2">
-                     <ul class="flex flex-row flex-wrap  mb-2 gap-2 w-full">
-                        {techs.map((tag) => (
-                           <li>
-                              <span
-                                 class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-                              >
-                                 <tag.icon class="size-4" />
-                                 {tag.name}
-                              </span>
-                           </li>
-                        ))}
-                     </ul>
+                  <div class="w-full md:w-1/2 md:max-w-lg">
+                     <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                        {title}
+                     </h3>
+                     <div class="flex flex-wrap mt-2">
+                        <ul class="flex flex-row flex-wrap  mb-2 gap-2 w-full">
+                           {techs.map((tag) => (
+                              <li>
+                                 <span
+                                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                                 >
+                                    <tag.icon class="size-4" />
+                                    {tag.name}
+                                 </span>
+                              </li>
+                           ))}
+                        </ul>
 
-                     <p class="mt-2 w-full text-gray-700 dark:text-gray-300">
-                        {description}
-                     </p>
-                     <footer class="flex items-end justify-start mt-4 gap-x-4">
-                        {github && (
-                           <LinkButton href={github}>
-                              <GitHub class="size-6" />
-                              {lang === "es" ? "Código" : "Source Code"}
-                           </LinkButton>
-                        )}
-                        {link && (
-                           <LinkButton href={link}>
-                              <Link class="size-4" />
-                              {lang === "es" ? "Ver en vivo" : "Live Demo"}
-                           </LinkButton>
-                        )}
-                     </footer>
+                        <p class="mt-2 w-full text-gray-700 dark:text-gray-300">
+                           {description}
+                        </p>
+                        <footer class="flex items-end justify-start mt-4 gap-x-4">
+                           {github && (
+                              <LinkButton href={github}>
+                                 <GitHub class="size-6" />
+                                 {lang === "es" ? "Código" : "Source Code"}
+                              </LinkButton>
+                           )}
+                           {link && (
+                              <LinkButton href={link}>
+                                 <Link class="size-4" />
+                                 {lang === "es" ? "Ver en vivo" : "Live Demo"}
+                              </LinkButton>
+                           )}
+                        </footer>
+                     </div>
                   </div>
-               </div>
-            </article>
-         ))
+               </article>
+            )
+         )
       }
    </div>
 </SectionContainer>

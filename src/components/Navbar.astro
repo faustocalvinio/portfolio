@@ -1,52 +1,8 @@
 ---
 const url = new URL(Astro.request.url);
 
-import LanguageDropdown from "./LanguageDropdown.astro";
-import ThemeSwitcher from "./ThemeSwitcher.astro";
 let navItems = [];
-//    {
-//       title: "Experiencia",
-//       label: "experiencia",
-//       url: "/#experiencia",
-//    },
-//    {
-//       title: "Proyectos",
-//       label: "proyectos",
-//       url: "/#proyectos",
-//    },
-//    {
-//       title: "Sobre mí",
-//       label: "sobre-mi",
-//       url: "/#sobre-mi",
-//    },
-//    {
-//       title: "Contacto",
-//       label: "contacto",
-//       url: "mailto:faustocalvino@outlook.com",
-//    },
-// ];
-// const navItemsEn = [
-//    {
-//       title: "Experience",
-//       label: "experience",
-//       url: "/#experience",
-//    },
-//    {
-//       title: "Projects",
-//       label: "projects",
-//       url: "/#projects",
-//    },
-//    {
-//       title: "About me",
-//       label: "about-me",
-//       url: "/#about-me",
-//    },
-//    {
-//       title: "Contact",
-//       label: "contact",
-//       url: "mailto:faustocalvino@outlook.com",
-//    },
-// ];
+
 interface Props {
    LANG: string;
 }
@@ -121,10 +77,7 @@ if (LANG === "ES") {
          ))
       }
 
-      <!-- <li class="items-center md:flex">
-         <ThemeSwitcher />
-      </li> -->
-      <!-- <LanguageDropdown /> -->
+
        {
          LANG === "ES" ? (
             <li class="items-center md:flex">

@@ -15,6 +15,8 @@ export const EXPERIENCIA_ES = [
   "Julio 2021 - Actualmente",
   "Sumando conocimientos sobre el desarrollo web",
   "Desde julio de 2021, he estado metido de lleno en el desarrollo web, aprendiendo tanto backend como frontend. Este tiempo ha sido súper importante para mí, ya que he podido mejorar mucho y aprender sobre varias tecnologías y herramientas.",
+  "Ver presentación de proyectos",
+
 ];
 
 export const SOBREMI_ES = [

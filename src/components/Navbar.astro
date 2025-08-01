@@ -105,7 +105,7 @@ if (LANG === "ES") {
    class="mt-7 md:mt-2 absolute right-3 md:fixed mx-auto z-30 md:w-full md:flex"
 >
    <ul
-      class="flex gap-4 w-fit mx-auto border border-gray-400 dark:border-white  dark:bg-transparent px-3 text-lg py-2 rounded-lg items-center "
+      class="flex gap-4 w-fit mx-auto border border-gray-400 dark:border-white dark:bg-transparent px-3 text-lg py-2 rounded-lg items-center"
    >
       {
          navItems.map((link) => (
@@ -121,10 +121,33 @@ if (LANG === "ES") {
          ))
       }
 
-      <li class="items-center md:flex">
+      <!-- <li class="items-center md:flex">
          <ThemeSwitcher />
-      </li>
-       <LanguageDropdown/>
+      </li> -->
+      <!-- <LanguageDropdown /> -->
+       {
+         LANG === "ES" ? (
+            <li class="items-center md:flex">
+               <a
+                  class="relative block px-1 transition hover:text-cyan-500 dark:hover:text-cyan-700"
+                  aria-label="English"
+                  href={ "/en"}
+               >
+                  EN
+               </a>
+            </li>
+         ) : (
+            <li class="items-center md:flex">
+               <a
+                  class="relative block px-1 transition hover:text-cyan-500 dark:hover:text-cyan-700"
+                  aria-label="Español"
+                  href={"/"}
+               >
+                  ES
+               </a>
+            </li>
+         )
+       }
    </ul>
 </nav>
 <style>
@@ -139,7 +162,29 @@ if (LANG === "ES") {
 
    @keyframes nav-shadown {
       to {
-         @apply bg-white/20 shadow-lg ring-1 ring-white/10 backdrop-blur dark:bg-gray-800/90;
+         background-color: rgba(255, 255, 255, 0.2);
+         box-shadow:
+            0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05);
+         border: 1px solid rgba(255, 255, 255, 0.1);
+         backdrop-filter: blur(8px);
+      }
+   }
+
+   .dark ul {
+      animation: nav-shadown-dark 1s linear both;
+      animation-timeline: scroll();
+      animation-range: 0 100px;
+   }
+
+   @keyframes nav-shadown-dark {
+      to {
+         background-color: rgba(31, 41, 55, 0.9);
+         box-shadow:
+            0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05);
+         border: 1px solid rgba(255, 255, 255, 0.1);
+         backdrop-filter: blur(8px);
       }
    }
 </style>

@@ -8,6 +8,7 @@ interface Props {
    lang: "es" | "en";
 }
 import ScrollToTop from "../components/ScrollToTop.astro";
+import { slide, ViewTransitions } from "astro:transitions";
 const { title, description, image, url, lang } = Astro.props;
 ---
 
@@ -16,9 +17,16 @@ const { title, description, image, url, lang } = Astro.props;
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width" />
       <link rel="icon" type="image/svg+xml" href="/faviconsvg.svg" />
+      <script>
+         const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+         if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+         }
+      </script>
       <slot name="meta" />
+          <ViewTransitions />
    </head>
-   <body class="dark:text-white text-[18px] leading-snug">
+   <body class="dark:text-white text-[18px] leading-snug" transition:animate={slide({duration: 1000})}>
       <div
          class="fixed overflow-visible -z-10 h-screen w-full bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]  dark:bg-slate-950 dark:bg-[radial-gradient(circle_500px_at_50%_200px,#2A2A2A,transparent)]"
       >

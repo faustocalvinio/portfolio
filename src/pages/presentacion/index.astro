@@ -1,4 +1,5 @@
 ---
+import Navbar from "../../components/Navbar.astro";
 import PageMetaEs from "../../components/PageMetaEs.astro";
 import ScreenshotPreview from "../../components/ScreenshotPreview.astro";
 import Layout from "../../layouts/Layout.astro";
@@ -6,11 +7,23 @@ import Layout from "../../layouts/Layout.astro";
 
 <PageMetaEs title="Presentación sitios desarrollados con WordPress" />
 <Layout lang="en">
+   <!-- <Navbar LANG="ES" />
+     -->
+   
    <div
-      class="flex px-4 md:px-0 h-screen max-w-[800px] mx-auto pt-10 flex-col gap-3"
+      class="flex px-4 md:px-0 h-screen max-w-[800px] mx-auto pt-6 flex-col gap-3 "
    >
-      <h1 class="text-3xl font-semibold">
-         Presentacion de mis sitios desarrollados con WordPress 
+      <a
+         href="/"
+         class="flex w-fit items-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200"
+      >
+         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+         </svg>
+         Volver al inicio
+      </a>
+      <h1 class="text-3xl font-semibold mt-6">
+         Presentacion de mis sitios desarrollados con WordPress
       </h1>
       <p>
          Aquí les dejo una lista de mis últimos trabajos con una pequeña

@@ -20,21 +20,45 @@
 </button>
 
 <script>
-   window.addEventListener("scroll", () => {
+   function initScrollToTop() {
       const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-      if (window.scrollY > 200) {
-         scrollToTopBtn.style.opacity = "1";
-         scrollToTopBtn.style.transform = "translateY(0)";
-      } else {
-         scrollToTopBtn.style.opacity = "0";
-         scrollToTopBtn.style.transform = "translateY(20px)";
-      }
-   });
+      if (!scrollToTopBtn) return;
 
-   document.getElementById("scrollToTopBtn").addEventListener("click", () => {
-      window.scrollTo({
-         top: 0,
-         behavior: "smooth",
-      });
-   });
+      // Remover listeners existentes si los hay
+      scrollToTopBtn.replaceWith(scrollToTopBtn.cloneNode(true));
+      const newScrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      // Función para manejar el scroll
+      function handleScroll() {
+         if (window.scrollY > 200) {
+            newScrollToTopBtn.style.opacity = "1";
+            newScrollToTopBtn.style.transform = "translateY(0)";
+         } else {
+            newScrollToTopBtn.style.opacity = "0";
+            newScrollToTopBtn.style.transform = "translateY(20px)";
+         }
+      }
+
+      // Función para scroll to top
+      function scrollToTop() {
+         window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+         });
+      }
+
+      // Agregar event listeners
+      window.addEventListener("scroll", handleScroll);
+      newScrollToTopBtn.addEventListener("click", scrollToTop);
+
+      // Verificar estado inicial
+      handleScroll();
+   }
+
+   // Inicializar al cargar
+   document.addEventListener("DOMContentLoaded", initScrollToTop);
+
+   // Reinicializar después de view transitions
+   document.addEventListener("astro:after-swap", initScrollToTop);
+   document.addEventListener("astro:page-load", initScrollToTop);
 </script>

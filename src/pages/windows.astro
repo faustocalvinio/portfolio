@@ -1,0 +1,148 @@
+---
+import Win98Layout from "../layouts/Win98Layout.astro";
+import PageMetaEs from "../components/PageMetaEs.astro";
+import Hero from "../sections/Hero.astro";
+import Experiencia from "../sections/Experiencia.astro";
+import AboutMe from "../sections/SobreMi.astro";
+import Proyectos from "../sections/Proyectos.astro";
+import Skills from "../sections/Skills.astro";
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+import { SITE_TITLE } from "../config-es";
+import {
+   HERO_ES,
+   EXPERIENCIA_ES,
+   SOBREMI_ES,
+   FOOTER_ES,
+} from "../data/espanol";
+---
+
+<Win98Layout lang="es">
+   <PageMetaEs title={`${SITE_TITLE} - Windows 98`} slot="meta" />
+
+   <main>
+      <section class="win98-window">
+         <div class="win98-titlebar">
+            <span class="title">Menú</span>
+            <div class="win98-controls">
+               <div class="win98-btn"></div>
+               <div class="win98-btn"></div>
+               <div class="win98-btn"></div>
+            </div>
+         </div>
+         <div class="win98-content">
+            <Navbar LANG="ES" />
+         </div>
+      </section>
+
+      <section class="win98-window">
+         <div class="win98-titlebar">
+            <span class="title">Bienvenida</span>
+            <div class="win98-controls">
+               <div class="win98-btn"></div><div class="win98-btn"></div><div
+                  class="win98-btn"
+               >
+               </div>
+            </div>
+         </div>
+         <div class="win98-content">
+            <Hero TEXTS={HERO_ES} />
+         </div>
+      </section>
+
+      <section class="win98-window">
+         <div class="win98-titlebar">
+            <span class="title">Experiencia</span>
+            <div class="win98-controls">
+               <div class="win98-btn"></div><div class="win98-btn"></div><div
+                  class="win98-btn"
+               >
+               </div>
+            </div>
+         </div>
+         <div class="win98-content">
+            <Experiencia TEXTS={EXPERIENCIA_ES} />
+         </div>
+      </section>
+
+      <section class="win98-window">
+         <div class="win98-titlebar">
+            <span class="title">Sobre mí</span>
+            <div class="win98-controls">
+               <div class="win98-btn"></div><div class="win98-btn"></div><div
+                  class="win98-btn"
+               >
+               </div>
+            </div>
+         </div>
+         <div class="win98-content">
+            <AboutMe TEXTS={SOBREMI_ES} />
+         </div>
+      </section>
+
+      <section class="win98-window">
+         <div class="win98-titlebar">
+            <span class="title">Proyectos</span>
+            <div class="win98-controls">
+               <div class="win98-btn"></div><div class="win98-btn"></div><div
+                  class="win98-btn"
+               >
+               </div>
+            </div>
+         </div>
+         <div class="win98-content">
+            <Proyectos lang="es" />
+         </div>
+      </section>
+
+      <section class="win98-window">
+         <div class="win98-titlebar">
+            <span class="title">Skills</span>
+            <div class="win98-controls">
+               <div class="win98-btn"></div><div class="win98-btn"></div><div
+                  class="win98-btn"
+               >
+               </div>
+            </div>
+         </div>
+         <div class="win98-content">
+            <Skills lang="es" />
+         </div>
+      </section>
+
+      <section class="win98-window">
+         <div class="win98-titlebar">
+            <span class="title">Footer</span>
+            <div class="win98-controls">
+               <div class="win98-btn"></div><div class="win98-btn"></div><div
+                  class="win98-btn"
+               >
+               </div>
+            </div>
+         </div>
+         <div class="win98-content">
+            <Footer TEXTS={FOOTER_ES} />
+         </div>
+      </section>
+   </main>
+</Win98Layout>
+<style>
+   /* Override Navbar fixed/absolute to fit inside Win98 windows */
+   .win98-content nav {
+      position: static !important;
+      inset: auto !important;
+      margin: 0 !important;
+   }
+   .win98-content nav ul {
+      background: #c0c0c0 !important;
+      border-color: #000 !important;
+      box-shadow:
+         inset -1px -1px 0 #fff,
+         inset 1px 1px 0 #808080,
+         inset -2px -2px 0 #dfdfdf,
+         inset 2px 2px 0 #404040 !important;
+   }
+   .win98-content nav a {
+      color: #000 !important;
+   }
+</style>

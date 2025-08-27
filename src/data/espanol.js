@@ -1,7 +1,7 @@
 export const HERO_ES = [
   "Disponible para trabajar",
   "Hola, soy Fausto",
-  "Un desarrollador web full-stack con tres años de experiencia en el ecosistema de aplicaciones desarrolladas con React, Next.js y aplicaciones de backend basadas en Node.js.",
+  "Un desarrollador web full-stack con cuatro años de experiencia en el ecosistema de aplicaciones desarrolladas con React, Next.js y aplicaciones de backend basadas en Node.js.",
   "Correo",
   "CV",
   `${import.meta.env.PORTFOLIO_URL}/CV_Fausto_Calvino.pdf`,
@@ -16,7 +16,9 @@ export const EXPERIENCIA_ES = [
   "Sumando conocimientos sobre el desarrollo web",
   "Desde julio de 2021, he estado metido de lleno en el desarrollo web, aprendiendo tanto backend como frontend. Este tiempo ha sido súper importante para mí, ya que he podido mejorar mucho y aprender sobre varias tecnologías y herramientas.",
   "Ver presentación de proyectos",
-  "proyectos-wordpress"
+  "proyectos-wordpress",
+  "Ver conocimientos detallados",
+  "conocimientos",
 ];
 
 export const SOBREMI_ES = [

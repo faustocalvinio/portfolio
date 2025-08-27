@@ -1,0 +1,432 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import PageMetaEs from "../components/PageMetaEs.astro";
+import SkillCard from "../components/SkillCard.astro";
+
+import NetlifyIcon from "../components/icons/NetlifyIcon.astro";
+import ActionsGithubIcon from "../components/icons/ActionsGithubIcon.astro";
+import VSCodeIcon from "../components/icons/VSCodeIcon.astro";
+import BigTsIcon from "../components/icons/BigTSIcon.astro";
+import BigJSIcon from "../components/icons/BigJSIcon.astro";
+import BigHTMLIcon from "../components/icons/BigHTMLIcon.astro";
+import BigCSSIcon from "../components/icons/BigCSSIcon.astro";
+import BigAstroIcon from "../components/icons/BigAstroIcon.astro";
+import ReactBig from "../components/icons/ReactBig.astro";
+import NextBigIcon from "../components/icons/NextBigIcon.astro";
+import NodeIcon from "../components/icons/NodeIcon.astro";
+import ExpressBigIcon from "../components/icons/ExpressBigIcon.astro";
+import NestJsIcon from "../components/icons/NestJsIcon.astro";
+import PgIcon from "../components/icons/PgIcon.astro";
+import MongoDBSmallIcon from "../components/icons/MongoDBSmallIcon.astro";
+import GitIcon from "../components/icons/GitIcon.astro";
+import GithubBigIcon from "../components/icons/GithubBigIcon.astro";
+import TailwindBigIcon from "../components/icons/TailwindBigIcon.astro";
+import WordpressBigIcon from "../components/icons/WordpressBigIcon.astro";
+import ElementorBigIcon from "../components/icons/ElementorBigIcon.astro";
+import DockerIcon from "../components/icons/DockerIcon.astro";
+import PostmanIcon from "../components/icons/PostmanIcon.astro";
+import MySQLIcon from "../components/icons/MySQLIcon.astro";
+import BootstrapIcon from "../components/icons/BootstrapIcon.astro";
+import VercelIcon from "../components/icons/VercelIcon.astro";
+
+const categories = {
+   es: {
+      backToHome: "Volver al inicio",
+      title: "Stack Tecnológico Detallado",
+      description:
+         "Aquí tienes un desglose completo de mis conocimientos técnicos organizados por categorías. Cada tecnología representa experiencia práctica en proyectos reales.",
+      languages: "Lenguajes de Programación",
+      languagesDesc:
+         "Los fundamentos de mi desarrollo. Tecnologías core que utilizo para crear soluciones web modernas y eficientes.",
+      frontend: "Frontend Frameworks",
+      frontendDesc:
+         "Frameworks y librerías para crear interfaces de usuario dinámicas, responsivas y con excelente experiencia de usuario.",
+      backend: "Backend Frameworks",
+      backendDesc:
+         "Tecnologías server-side para construir APIs robustas, servicios escalables y arquitecturas backend sólidas.",
+      databases: "Bases de Datos",
+      databasesDesc:
+         "Sistemas de gestión de datos relacionales y NoSQL para almacenar, consultar y administrar información de manera eficiente.",
+      styling: "Styling & UI",
+      stylingDesc:
+         "Frameworks de CSS y herramientas de diseño para crear interfaces atractivas, responsivas y consistentes.",
+      tools: "Herramientas de Desarrollo",
+      toolsDesc:
+         "Entorno de desarrollo, control de versiones y herramientas que optimizan mi flujo de trabajo diario.",
+      cms: "CMS & Website Builders",
+      cmsDesc:
+         "Sistemas de gestión de contenido y constructores web para proyectos que requieren administración de contenido flexible.",
+      cicd: "DevOps & CI/CD",
+      cicdDesc:
+         "Plataformas de despliegue, contenedores y automatización para entregar aplicaciones de manera eficiente y confiable.",
+      testing: "Testing",
+      testingDesc:
+         "Frameworks y herramientas de testing para garantizar la calidad, confiabilidad y mantenibilidad del código.",
+      libraries: "Librerías & APIs",
+      librariesDesc:
+         "Librerías especializadas y herramientas que complementan mi stack principal para funcionalidades específicas.",
+   },
+   en: {
+      backToHome: "Back to Home",
+      title: "Detailed Tech Stack",
+      description:
+         "Here you have a complete breakdown of my technical knowledge organized by categories. Each technology represents hands-on experience in real projects.",
+      languages: "Programming Languages",
+      languagesDesc:
+         "The foundations of my development. Core technologies I use to create modern and efficient web solutions.",
+      frontend: "Frontend Frameworks",
+      frontendDesc:
+         "Frameworks and libraries for creating dynamic, responsive user interfaces with excellent user experience.",
+      backend: "Backend Frameworks",
+      backendDesc:
+         "Server-side technologies to build robust APIs, scalable services, and solid backend architectures.",
+      databases: "Databases",
+      databasesDesc:
+         "Relational and NoSQL database management systems for storing, querying, and managing data efficiently.",
+      styling: "Styling & UI",
+      stylingDesc:
+         "CSS frameworks and design tools for creating attractive, responsive, and consistent interfaces.",
+      tools: "Development Tools",
+      toolsDesc:
+         "Development environment, version control, and tools that optimize my daily workflow.",
+      cms: "CMS & Website Builders",
+      cmsDesc:
+         "Content management systems and web builders for projects requiring flexible content administration.",
+      cicd: "DevOps & CI/CD",
+      cicdDesc:
+         "Deployment platforms, containers, and automation for delivering applications efficiently and reliably.",
+      testing: "Testing",
+      testingDesc:
+         "Testing frameworks and tools to ensure code quality, reliability, and maintainability.",
+      libraries: "Libraries & APIs",
+      librariesDesc:
+         "Specialized libraries and tools that complement my main stack for specific functionalities.",
+   },
+};
+
+const { lang } = Astro.props;
+const texts = categories[lang];
+---
+
+<Layout lang={lang}>
+   <div
+      class="flex px-4 md:px-0 min-h-screen max-w-[900px] mx-auto pt-6 flex-col gap-8"
+   >
+      <div class="flex flex-col gap-4">
+         <a
+            href="/"
+            class="flex w-fit items-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200"
+         >
+            <svg
+               class="w-4 h-4 mr-2"
+               fill="none"
+               stroke="currentColor"
+               viewBox="0 0 24 24"
+            >
+               <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            {texts.backToHome}
+         </a>
+
+         <h1
+            class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white"
+         >
+            {texts.title}
+         </h1>
+
+         <p
+            class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl"
+         >
+            {texts.description}
+         </p>
+      </div>
+
+      <section class="space-y-6">
+         <h2
+            class="text-3xl font-bold text-gray-900 dark:text-white border-b-2 border-blue-500 pb-2"
+         >
+            💻 {texts.languages}
+         </h2>
+         <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+            {texts.languagesDesc}
+         </p>
+         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <SkillCard key="JavaScript" name="JavaScript" brandColor="#F7DF1E">
+               <BigJSIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="TypeScript" name="TypeScript" brandColor="#3178C6">
+               <BigTsIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="HTML5" name="HTML5" brandColor="#E34F26">
+               <BigHTMLIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="CSS3" name="CSS3" brandColor="#1572B6">
+               <BigCSSIcon slot="icon" />
+            </SkillCard>
+         </div>
+      </section>
+
+      <section class="space-y-6">
+         <h2
+            class="text-3xl font-bold text-gray-900 dark:text-white border-b-2 border-green-500 pb-2"
+         >
+            🎨 {texts.frontend}
+         </h2>
+         <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+            {texts.frontendDesc}
+         </p>
+         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <SkillCard key="React" name="React" brandColor="#61DAFB">
+               <ReactBig slot="icon" />
+            </SkillCard>
+            <SkillCard key="Nextjs" name="Next.js" brandColor="#000000">
+               <NextBigIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="Astro" name="Astro" brandColor="#FF5D01">
+               <BigAstroIcon slot="icon" />
+            </SkillCard>
+         </div>
+      </section>
+
+      <section class="space-y-6">
+         <h2
+            class="text-3xl font-bold text-gray-900 dark:text-white border-b-2 border-purple-500 pb-2"
+         >
+            ⚙️ {texts.backend}
+         </h2>
+         <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+            {texts.backendDesc}
+         </p>
+         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <SkillCard key="Nodejs" name="Node.js" brandColor="#339933">
+               <NodeIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="Expressjs" name="Express.js" brandColor="#000000">
+               <ExpressBigIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="nestjs" name="NestJS" brandColor="#E0234E">
+               <NestJsIcon slot="icon" />
+            </SkillCard>
+         </div>
+      </section>
+
+      <section class="space-y-6">
+         <h2
+            class="text-3xl font-bold text-gray-900 dark:text-white border-b-2 border-orange-500 pb-2"
+         >
+            🗄️ {texts.databases}
+         </h2>
+         <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+            {texts.databasesDesc}
+         </p>
+         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <SkillCard key="PostgreSQL" name="PostgreSQL" brandColor="#336791">
+               <PgIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="MongoDB" name="MongoDB" brandColor="#47A248">
+               <MongoDBSmallIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="MySQL" name="MySQL" brandColor="#4479A1">
+               <MySQLIcon slot="icon" />
+            </SkillCard>
+         </div>
+      </section>
+
+      <section class="space-y-6">
+         <h2
+            class="text-3xl font-bold text-gray-900 dark:text-white border-b-2 border-pink-500 pb-2"
+         >
+            🎨 {texts.styling}
+         </h2>
+         <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+            {texts.stylingDesc}
+         </p>
+         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <SkillCard key="Tailwind" name="Tailwind CSS" brandColor="#38B2AC">
+               <TailwindBigIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="Bootstrap" name="Bootstrap" brandColor="#7952B3">
+               <BootstrapIcon slot="icon" />
+            </SkillCard>
+         </div>
+      </section>
+
+      <section class="space-y-6">
+         <h2
+            class="text-3xl font-bold text-gray-900 dark:text-white border-b-2 border-red-500 pb-2"
+         >
+            🛠️ {texts.tools}
+         </h2>
+         <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+            {texts.toolsDesc}
+         </p>
+         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <SkillCard key="Git" name="Git" brandColor="#F05032">
+               <GitIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="Github" name="GitHub" brandColor="#ffffff">
+               <GithubBigIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="Postman" name="Postman" brandColor="#FF6C37">
+               <PostmanIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="VSCode" name="VS Code" brandColor="#007ACC">
+               <VSCodeIcon slot="icon" />
+            </SkillCard>
+         </div>
+      </section>
+
+      <section class="space-y-6">
+         <h2
+            class="text-3xl font-bold text-gray-900 dark:text-white border-b-2 border-indigo-500 pb-2"
+         >
+            📝 {texts.cms}
+         </h2>
+         <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+            {texts.cmsDesc}
+         </p>
+         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <SkillCard key="wordpress" name="WordPress" brandColor="#21759B">
+               <WordpressBigIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="elementor" name="Elementor" brandColor="#E11D48">
+               <ElementorBigIcon slot="icon" />
+            </SkillCard>
+            <SkillCard
+               key="woocommerce"
+               name="WooCommerce"
+               brandColor="#96588A"
+            >
+               <WordpressBigIcon slot="icon" />
+            </SkillCard>
+         </div>
+      </section>
+
+      <section class="space-y-6">
+         <h2
+            class="text-3xl font-bold text-gray-900 dark:text-white border-b-2 border-teal-500 pb-2"
+         >
+            🚀 {texts.cicd}
+         </h2>
+         <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+            {texts.cicdDesc}
+         </p>
+         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <SkillCard key="docker" name="Docker" brandColor="#2496ED">
+               <DockerIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="vercel" name="Vercel" brandColor="#000000">
+               <VercelIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="netlify" name="Netlify" brandColor="#00C7B7">
+               <NetlifyIcon slot="icon" />
+            </SkillCard>
+            <SkillCard
+               key="github-actions"
+               name="GitHub Actions"
+               brandColor="#2088FF"
+            >
+               <ActionsGithubIcon slot="icon" />
+            </SkillCard>
+         </div>
+      </section>
+
+      <section class="space-y-6">
+         <h2
+            class="text-3xl font-bold text-gray-900 dark:text-white border-b-2 border-yellow-500 pb-2"
+         >
+            📚 {texts.libraries}
+         </h2>
+         <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+            {texts.librariesDesc}
+         </p>
+         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <SkillCard
+               key="react-query"
+               name="React Query"
+               brandColor="#FF4154"
+            >
+               <ReactBig slot="icon" />
+            </SkillCard>
+            <SkillCard key="zustand" name="Zustand" brandColor="#443E38">
+               <ReactBig slot="icon" />
+            </SkillCard>
+            <SkillCard key="axios" name="Axios" brandColor="#5A29E4">
+               <ReactBig slot="icon" />
+            </SkillCard>
+            <SkillCard key="prisma" name="Prisma" brandColor="#2D3748">
+               <PgIcon slot="icon" />
+            </SkillCard>
+         </div>
+      </section>
+
+      <section class="space-y-6">
+         <h2
+            class="text-3xl font-bold text-gray-900 dark:text-white border-b-2 border-emerald-500 pb-2"
+         >
+            🧪 {texts.testing}
+         </h2>
+         <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+            {texts.testingDesc}
+         </p>
+         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <SkillCard key="jest" name="Jest" brandColor="#C21325">
+               <ReactBig slot="icon" />
+            </SkillCard>
+            <SkillCard
+               key="testing-library"
+               name="Testing Library"
+               brandColor="#E33332"
+            >
+               <ReactBig slot="icon" />
+            </SkillCard>
+         </div>
+      </section>
+
+      <p class="text-center text-xl pb-10 text-gray-600 dark:text-gray-300">
+         🔄 Mi stack tecnológico está en constante evolución. <a
+            class="underline text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200"
+            href="https://facal.me">Volver al portfolio principal</a
+         >
+      </p>
+   </div>
+</Layout>
+
+<style>
+   .grid > * {
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+      transform: translateY(20px);
+   }
+
+   .grid > *:nth-child(1) {
+      animation-delay: 0.1s;
+   }
+   .grid > *:nth-child(2) {
+      animation-delay: 0.2s;
+   }
+   .grid > *:nth-child(3) {
+      animation-delay: 0.3s;
+   }
+   .grid > *:nth-child(4) {
+      animation-delay: 0.4s;
+   }
+   .grid > *:nth-child(5) {
+      animation-delay: 0.5s;
+   }
+   .grid > *:nth-child(6) {
+      animation-delay: 0.6s;
+   }
+
+   @keyframes fadeInUp {
+      to {
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+</style>

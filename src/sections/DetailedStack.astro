@@ -1,11 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-import PageMetaEs from "../components/PageMetaEs.astro";
 import SkillCard from "../components/SkillCard.astro";
-
 import NetlifyIcon from "../components/icons/NetlifyIcon.astro";
-import ActionsGithubIcon from "../components/icons/ActionsGithubIcon.astro";
 import VSCodeIcon from "../components/icons/VSCodeIcon.astro";
 import BigTsIcon from "../components/icons/BigTSIcon.astro";
 import BigJSIcon from "../components/icons/BigJSIcon.astro";
@@ -29,6 +25,11 @@ import PostmanIcon from "../components/icons/PostmanIcon.astro";
 import MySQLIcon from "../components/icons/MySQLIcon.astro";
 import BootstrapIcon from "../components/icons/BootstrapIcon.astro";
 import VercelIcon from "../components/icons/VercelIcon.astro";
+import JestIcon from "../components/icons/JestIcon.astro";
+import Vitest from "../components/icons/Vitest.astro";
+import CopilotIcon from "../components/icons/CopilotIcon.astro";
+import MCPIcon from "../components/icons/MCPIcon.astro";
+import AWSIcon from "../components/icons/AWSIcon.astro";
 
 const categories = {
    es: {
@@ -278,6 +279,12 @@ const texts = categories[lang];
             <SkillCard key="VSCode" name="VS Code" brandColor="#007ACC">
                <VSCodeIcon slot="icon" />
             </SkillCard>
+            <SkillCard key="Copilot" name="Copilot" brandColor="#6CC644">
+               <CopilotIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="MCPs" name="MCPs" brandColor="#F2A900">
+               <MCPIcon slot="icon" />
+            </SkillCard>
          </div>
       </section>
 
@@ -296,14 +303,7 @@ const texts = categories[lang];
             </SkillCard>
             <SkillCard key="elementor" name="Elementor" brandColor="#E11D48">
                <ElementorBigIcon slot="icon" />
-            </SkillCard>
-            <SkillCard
-               key="woocommerce"
-               name="WooCommerce"
-               brandColor="#96588A"
-            >
-               <WordpressBigIcon slot="icon" />
-            </SkillCard>
+            </SkillCard>            
          </div>
       </section>
 
@@ -328,10 +328,13 @@ const texts = categories[lang];
             </SkillCard>
             <SkillCard
                key="github-actions"
-               name="GitHub Actions"
+               name="GH Actions"
                brandColor="#2088FF"
             >
-               <ActionsGithubIcon slot="icon" />
+               <GithubBigIcon slot="icon" />
+            </SkillCard>
+            <SkillCard key="aws" name="AWS" brandColor="#FF9900">
+               <AWSIcon slot="icon" />
             </SkillCard>
          </div>
       </section>
@@ -376,14 +379,10 @@ const texts = categories[lang];
          </p>
          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <SkillCard key="jest" name="Jest" brandColor="#C21325">
-               <ReactBig slot="icon" />
+               <JestIcon slot="icon" />
             </SkillCard>
-            <SkillCard
-               key="testing-library"
-               name="Testing Library"
-               brandColor="#E33332"
-            >
-               <ReactBig slot="icon" />
+            <SkillCard key="vitest" name="Vitest" brandColor="#4BC0C0">
+               <Vitest slot="icon" />
             </SkillCard>
          </div>
       </section>

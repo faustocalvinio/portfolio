@@ -30,6 +30,10 @@ import Vitest from "../components/icons/Vitest.astro";
 import CopilotIcon from "../components/icons/CopilotIcon.astro";
 import MCPIcon from "../components/icons/MCPIcon.astro";
 import AWSIcon from "../components/icons/AWSIcon.astro";
+import PrismaIcon from "../components/icons/PrismaIcon.astro";
+import ZustandBigIcon from "../components/icons/ZustandBigIcon.astro";
+import ReactQueryBigIcon from "../components/icons/ReactQueryBigIcon.astro";
+import AxiosBigLogo from "../components/icons/AxiosBigLogo.astro";
 
 const categories = {
    es: {
@@ -351,19 +355,19 @@ const texts = categories[lang];
          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <SkillCard
                key="react-query"
-               name="React Query"
+               name="TanStack Query"
                brandColor="#FF4154"
             >
-               <ReactBig slot="icon" />
+               <ReactQueryBigIcon slot="icon" />
             </SkillCard>
-            <SkillCard key="zustand" name="Zustand" brandColor="#443E38">
-               <ReactBig slot="icon" />
+            <SkillCard key="zustand" name="Zustand" brandColor="#443e38">
+               <ZustandBigIcon slot="icon" />
             </SkillCard>
             <SkillCard key="axios" name="Axios" brandColor="#5A29E4">
-               <ReactBig slot="icon" />
+               <AxiosBigLogo slot="icon" />
             </SkillCard>
             <SkillCard key="prisma" name="Prisma" brandColor="#2D3748">
-               <PgIcon slot="icon" />
+               <PrismaIcon slot="icon" />
             </SkillCard>
          </div>
       </section>

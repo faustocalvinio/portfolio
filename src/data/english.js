@@ -24,10 +24,10 @@ export const SOBREMI_EN = [
   "About me",
   "Since mid-2021, I have been learning web development in a self-taught manner. I have solid knowledge in HTML, CSS, JavaScript, as well as in the ecosystem of frameworks such as React and Next.js.",
   "Currently, I am expanding my skills in Node.js, Go, and databases. You can learn more about my projects and experience on my web portfolio.",
-  "I am available for job opportunities, both remote and hybrid, in the city of Madrid, and I am excited to collaborate on projects involving these technologies.",
+  "I am available for job opportunities, both remote and hybrid, in the city of Buenos Aires, and I am excited to collaborate on projects involving these technologies.",
   "about-me"
 ];
 
-export const NAVBAR_EN=["Experience","About me","Projects","Contact"]
+export const NAVBAR_EN = ["Experience", "About me", "Projects", "Contact"]
 
-export const FOOTER_EN=["Inspired by "," Source code in this ","repository"]
+export const FOOTER_EN = ["Inspired by ", " Source code in this ", "repository"]

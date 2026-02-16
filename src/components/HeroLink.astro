@@ -1,11 +1,11 @@
 ---
-const { href } = Astro.props
+const { href } = Astro.props;
 ---
 
 <a
-  href={href}
-  target="_blank"
-  class="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium transition-all duration-300 bg-white/60 dark:bg-white/5 text-gray-800 dark:text-white border border-gray-200/80 dark:border-white/10 backdrop-blur-sm group max-w-fit rounded-xl hover:bg-blue-50 dark:hover:bg-white/10 hover:border-blue-300/60 dark:hover:border-cyan-400/30 hover:shadow-lg hover:shadow-blue-500/10 dark:hover:shadow-cyan-500/10 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 active:translate-y-0"
+   href={href}
+   target="_blank"
+   class="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium transition-all duration-300 bg-white/60 dark:bg-white/5 text-gray-800 dark:text-white border border-gray-200/80 dark:border-white/10 backdrop-blur-sm group max-w-fit rounded-xl hover:bg-blue-50 dark:hover:bg-white/10 hover:border-blue-300/60 dark:hover:border-cyan-400/30 hover:shadow-lg hover:shadow-blue-500/10 dark:hover:shadow-cyan-500/10 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 active:translate-y-0"
 >
-  <slot />
+   <slot />
 </a>

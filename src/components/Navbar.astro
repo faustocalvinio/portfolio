@@ -77,14 +77,13 @@ if (LANG === "ES") {
          ))
       }
 
-
-       {
+      {
          LANG === "ES" ? (
             <li class="items-center md:flex">
                <a
                   class="relative block px-1 transition hover:text-cyan-500 dark:hover:text-cyan-700"
                   aria-label="English"
-                  href={ "/en"}
+                  href={"/en"}
                >
                   EN
                </a>
@@ -100,7 +99,7 @@ if (LANG === "ES") {
                </a>
             </li>
          )
-       }
+      }
    </ul>
 </nav>
 <style>
@@ -112,14 +111,16 @@ if (LANG === "ES") {
       @apply hover:text-sky-500 dark:hover:text-cyan-400;
    }
    a::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -2px;
       left: 50%;
       width: 0;
       height: 2px;
       background: linear-gradient(90deg, #0ea5e9, #6366f1);
-      transition: width 0.3s ease, left 0.3s ease;
+      transition:
+         width 0.3s ease,
+         left 0.3s ease;
       border-radius: 1px;
    }
    a:hover::after {

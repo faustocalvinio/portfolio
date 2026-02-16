@@ -4,11 +4,15 @@ const { lang = "es" } = Astro.props;
 ---
       <!-- Información adicional -->
       <div
-         class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl my-10 p-6 border border-blue-200 dark:border-blue-800"
+         class="reveal glass rounded-2xl my-10 p-8 relative overflow-hidden"
       >
-         <div class="text-center">
+         <!-- Decoración sutil -->
+         <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-400/10 to-transparent rounded-bl-full"></div>
+         <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-indigo-400/10 to-transparent rounded-tr-full"></div>
+         
+         <div class="text-center relative z-10">
             <h4
-               class="text-xl font-semibold text-gray-900 dark:text-white mb-2"
+               class="text-xl font-bold text-gray-900 dark:text-white mb-3"
             >
                {
                   lang === "es"
@@ -16,7 +20,7 @@ const { lang = "es" } = Astro.props;
                      : "🌍 Location & Availability"
                }
             </h4>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
+            <p class="text-gray-600 dark:text-gray-300 mb-5">
                {
                   lang === "es"
                      ? "📍 Buenos Aires, Argentina • 🏠 Remoto • 🏢 Híbrido • ⏰ Disponible inmediatamente"
@@ -25,22 +29,22 @@ const { lang = "es" } = Astro.props;
             </p>
             <div class="flex flex-wrap justify-center gap-2">
                <span
-                  class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium"
+                  class="px-4 py-1.5 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium border border-green-200/50 dark:border-green-700/30"
                >
                   {lang === "es" ? "Disponible" : "Available"}
                </span>
                <span
-                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                  class="px-4 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200/50 dark:border-blue-700/30"
                >
                   Full Stack
                </span>
                <span
-                  class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium"
+                  class="px-4 py-1.5 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium border border-indigo-200/50 dark:border-indigo-700/30"
                >
                   React/Next.js
                </span>
                <span
-                  class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm font-medium"
+                  class="px-4 py-1.5 bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full text-sm font-medium border border-amber-200/50 dark:border-amber-700/30"
                >
                   Node.js
                </span>

@@ -12,40 +12,50 @@ interface Props {
 ---
 
 <SectionContainer aditionalClass="mt-0">
-   <div class="pt-4 md:pt-16 pb-6 flex flex-col max-w-[800px]">
-      <div class="flex items-center gap-2 mb-4">
-         <img
-            class="rounded-full shadow-lg size-16"
-            src="/fotos-mias/frente-hero-compressed.webp"
-            alt="Foto Fausto Portada"
-         />
+   <div class="pt-8 md:pt-24 pb-10 flex flex-col max-w-[800px]">
+      <!-- Avatar + badge con animación de entrada -->
+      <div class="flex items-center gap-3 mb-6 hero-fade-in" style="--delay: 0s">
+         <div class="relative">
+            <img
+               class="rounded-full size-18 md:size-20 ring-2 ring-blue-400/30 dark:ring-cyan-400/20 shadow-lg shadow-blue-500/10"
+               src="/fotos-mias/frente-hero-compressed.webp"
+               alt="Foto Fausto Portada"
+            />
+            <span class="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-green-400 rounded-full border-2 border-white dark:border-slate-950 animate-pulse"></span>
+         </div>
          <div class="flex items-center">
             <span
-               class="hidden md:inline-flex relative  overflow-hidden rounded-full p-[1px]"
+               class="hidden md:inline-flex relative overflow-hidden rounded-full p-[1px]"
             >
                <span
-                  class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#51E4B8_0%,#21554E_50%,#51E4B8_100%)]"
+                  class="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0ea5e9_0%,#6366f1_25%,#22d3ee_50%,#6366f1_75%,#0ea5e9_100%)]"
                ></span>
                <div
-                  class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-800 bg-green-100 rounded-full dark:bg-gray-900 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap"
+                  class="inline-flex items-center justify-center w-full px-4 py-1.5 text-sm font-medium text-green-700 bg-white/90 rounded-full dark:bg-slate-900/90 dark:text-green-300 backdrop-blur-xl whitespace-nowrap"
                >
                   {TEXTS[0]}
                </div>
             </span>
          </div>
       </div>
-      <h1 class="text-5xl gap-4 flex items-center font-bold">
-         {TEXTS[1]}<PeaceIcon />
+
+      <!-- Título con gradiente animado -->
+      <h1 class="hero-fade-in text-5xl md:text-6xl lg:text-7xl gap-4 flex items-center font-extrabold tracking-tight" style="--delay: 0.15s">
+         <span class="gradient-text">{TEXTS[1]}</span><PeaceIcon />
       </h1>
-      <p class="my-4">
+
+      <!-- Descripción con entrada escalonada -->
+      <p class="hero-fade-in my-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-[650px]" style="--delay: 0.3s">
          {TEXTS[2]}
       </p>
-      <div class="flex gap-2 flex-wrap">
+
+      <!-- Botones con glassmorphism y hover mejorado -->
+      <div class="hero-fade-in flex gap-3 flex-wrap" style="--delay: 0.45s">
          <HeroLink href="https://www.linkedin.com/in/faustocalvinio/">
             <svg
                xmlns="http://www.w3.org/2000/svg"
-               width="25"
-               height="25"
+               width="22"
+               height="22"
                viewBox="0 0 256 256"
                class="dark:text-white"
                ><path
@@ -58,8 +68,8 @@ interface Props {
          <HeroLink href="https://github.com/faustocalvinio">
             <svg
                xmlns="http://www.w3.org/2000/svg"
-               width="25"
-               height="25"
+               width="22"
+               height="22"
                viewBox="0 0 1024 1024"
                class="dark:text-white"
                ><path
@@ -82,6 +92,20 @@ interface Props {
 </SectionContainer>
 
 <style>
+   .hero-fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: heroFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-delay: var(--delay, 0s);
+   }
+
+   @keyframes heroFadeIn {
+      to {
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+
    @keyframes wavingAnimation {
       0% {
          transform: rotate(0);

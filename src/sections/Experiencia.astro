@@ -13,15 +13,11 @@ const { TEXTS } = Astro.props;
       <ExpLaboralIcon />
       <SectionTitle title={TEXTS[0]} />
    </div>
-   <ol
-      class="mt-8 relative border-s-2 border-blue-200/50 dark:border-cyan-800/30 ml-3"
-   >
-      <li class="reveal reveal-delay-1 mb-12 ms-8">
+   <div class="mt-8 flex flex-col gap-8">
+      <div class="reveal reveal-delay-1">
          <div
-            class="absolute w-4 h-4 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full -start-[9px] ring-4 ring-white dark:ring-slate-950 shadow-lg shadow-blue-500/20"
+            class="glass rounded-xl p-5 glow-blue border-l-4 border-sky-500 dark:border-cyan-400"
          >
-         </div>
-         <div class="glass rounded-xl p-5 glow-blue">
             <time
                class="mb-1.5 block font-medium text-sm text-blue-600 dark:text-cyan-400"
                >{TEXTS[1]}</time
@@ -40,13 +36,11 @@ const { TEXTS } = Astro.props;
                {TEXTS[7]}
             </a>
          </div>
-      </li>
-      <li class="reveal reveal-delay-2 ms-8">
+      </div>
+      <div class="reveal reveal-delay-2">
          <div
-            class="absolute w-4 h-4 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full -start-[9px] ring-4 ring-white dark:ring-slate-950 shadow-lg shadow-blue-500/20"
+            class="glass rounded-xl p-5 glow-blue border-l-4 border-sky-500 dark:border-cyan-400"
          >
-         </div>
-         <div class="glass rounded-xl p-5 glow-blue">
             <time
                class="mb-1.5 block font-medium text-sm text-blue-600 dark:text-cyan-400"
                >{TEXTS[4]}</time
@@ -64,6 +58,6 @@ const { TEXTS } = Astro.props;
                {TEXTS[9]}
             </a>
          </div>
-      </li>
-   </ol>
+      </div>
+   </div>
 </SectionContainer>

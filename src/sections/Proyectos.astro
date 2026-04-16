@@ -27,7 +27,7 @@ if (lang === "es") {
          title: "Blog Personal",
          description:
             "Blog donde compartiré cosas relacionadas con el desarrollo web a medida que las aprenda, con el objetivo de solidificar mis conocimientos.",
-         link: "https://blog.facal.me/",
+         link: "https://blog.facal.space/",
          github: "https://github.com/faustocalvinio/blog-fausto",
          image: "/screenshots-proyectos/blog-fausto.netlify.app_.webp",
          techs: [TECHS.ASTRO, TECHS.TAILWIND],
@@ -80,7 +80,7 @@ if (lang === "es") {
          title: "Personal Blog",
          description:
             "Blog where I will share things related to web development as I learn them, in order to solidify my knowledge.",
-         link: "https://blog.facal.me/",
+         link: "https://blog.facal.space/",
          github: "https://github.com/faustocalvinio/blog-fausto",
          image: "/screenshots-proyectos/blog-fausto.netlify.app_.webp",
          techs: [TECHS.ASTRO, TECHS.TAILWIND],
@@ -124,11 +124,11 @@ if (lang === "es") {
 ---
 
 <SectionContainer id=`${lang === "en" ? "projects" : "proyectos"}`>
-   <div class="flex gap-3 items-center">
+   <div class="flex gap-3 items-center mb-8">
       <ProjectsIcon />
       <SectionTitle title=`${lang === "en" ? "Projects" : "Proyectos"}` />
    </div>
-   <div class="flex flex-col gap-y-16 mt-4">
+   <div class="flex flex-col gap-y-12 md:gap-y-16">
       {
          PROJECTS.map(
             ({
@@ -141,53 +141,52 @@ if (lang === "es") {
                frontend,
                backend,
             }) => (
-               <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+               <article class="flex flex-col group md:flex-row gap-6 md:gap-8">
                   <div class="w-full md:w-1/2">
-                     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                     <div class="relative flex flex-col items-center gap-8 transition-all duration-300 ease-in-out overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 md:group-hover:-translate-y-1 md:group-hover:shadow-xl md:group-hover:border-gray-300 dark:md:group-hover:border-gray-700 bg-gray-50 dark:bg-gray-900/50">
                         <img
                            alt={`Imagen del proyecto ${title}`}
-                           class="w-fit aspect-video object-cover"
+                           class="w-full aspect-video object-cover"
+                           loading="lazy"
                            src={image}
                         />
                      </div>
                   </div>
 
-                  <div class="w-full md:w-1/2 md:max-w-lg">
-                     <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                  <div class="w-full md:w-1/2 md:max-w-lg flex flex-col justify-center">
+                     <h3 class="text-xl font-bold text-gray-900 dark:text-white">
                         {title}
                      </h3>
-                     <div class="flex flex-wrap mt-2">
-                        <ul class="flex flex-row flex-wrap  mb-2 gap-2 w-full">
-                           {techs.map((tag) => (
-                              <li>
-                                 <span
-                                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-                                 >
-                                    <tag.icon class="size-4" />
-                                    {tag.name}
-                                 </span>
-                              </li>
-                           ))}
-                        </ul>
+                     <ul class="flex flex-row flex-wrap mt-3 mb-3 gap-1.5">
+                        {techs.map((tag) => (
+                           <li>
+                              <span
+                                 class={`flex gap-x-1.5 items-center rounded-md text-xs ${tag.class} py-1 px-2 font-medium`}
+                              >
+                                 <tag.icon class="size-3.5" />
+                                 {tag.name}
+                              </span>
+                           </li>
+                        ))}
+                     </ul>
 
-                        <p class="mt-2 w-full text-gray-700 dark:text-gray-300">
-                           {description}
-                        </p>
-                        <footer class="flex items-end justify-start mt-4 gap-x-4">
-                           {github && (
-                              <LinkButton href={github}>
-                                 <GitHub class="size-6" />
-                                 {lang === "es" ? "Código" : "Source Code"}
-                              </LinkButton>
-                           )}
-                           {link && (
-                              <LinkButton href={link}>
-                                 <Link class="size-4" />
-                                 {lang === "es" ? "Ver en vivo" : "Live Demo"}
-                              </LinkButton>
-                           )}
-                        </footer>
-                     </div>
+                     <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-[15px]">
+                        {description}
+                     </p>
+                     <footer class="flex items-center mt-4 gap-3">
+                        {github && (
+                           <LinkButton href={github}>
+                              <GitHub class="size-4" />
+                              {lang === "es" ? "Código" : "Source Code"}
+                           </LinkButton>
+                        )}
+                        {link && (
+                           <LinkButton href={link}>
+                              <Link class="size-4" />
+                              {lang === "es" ? "Ver en vivo" : "Live Demo"}
+                           </LinkButton>
+                        )}
+                     </footer>
                   </div>
                </article>
             ),

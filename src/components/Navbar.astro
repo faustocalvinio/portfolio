@@ -28,7 +28,7 @@ if (LANG === "ES") {
       {
          title: "Contacto",
          label: "contacto",
-         url: "#contacto",
+         url: "#contact",
       },
    ];
 } else if (LANG === "EN") {
@@ -58,16 +58,16 @@ if (LANG === "ES") {
 ---
 
 <nav
-   class="mt-7 md:mt-2 absolute right-3 md:fixed mx-auto z-30 md:w-full md:flex"
+   class="fixed top-0 left-0 right-0 z-30 flex justify-center pt-4 px-4"
 >
    <ul
-      class="flex gap-4 w-fit mx-auto border border-gray-400 dark:border-white dark:bg-transparent px-3 text-lg py-2 rounded-lg items-center"
+      class="flex gap-1 md:gap-2 w-fit bg-white/80 dark:bg-gray-900/80 backdrop-blur-md px-2 md:px-4 py-2 rounded-full border border-gray-200/60 dark:border-gray-700/60 shadow-sm items-center text-sm md:text-base"
    >
       {
          navItems.map((link) => (
             <li class="max-sm:hidden">
                <a
-                  class="relative block px-1 transition  hover:text-cyan-500 dark:hover:text-cyan-700 "
+                  class="relative block px-3 py-1 rounded-full transition-colors duration-200 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
                   aria-label={link.label}
                   href={link.url}
                >
@@ -77,12 +77,11 @@ if (LANG === "ES") {
          ))
       }
 
-
        {
          LANG === "ES" ? (
             <li class="items-center md:flex">
                <a
-                  class="relative block px-1 transition hover:text-cyan-500 dark:hover:text-cyan-700"
+                  class="block px-3 py-1 rounded-full transition-colors duration-200 text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-medium text-sm"
                   aria-label="English"
                   href={ "/en"}
                >
@@ -92,7 +91,7 @@ if (LANG === "ES") {
          ) : (
             <li class="items-center md:flex">
                <a
-                  class="relative block px-1 transition hover:text-cyan-500 dark:hover:text-cyan-700"
+                  class="block px-3 py-1 rounded-full transition-colors duration-200 text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 font-medium text-sm"
                   aria-label="Español"
                   href={"/"}
                >
@@ -103,41 +102,3 @@ if (LANG === "ES") {
        }
    </ul>
 </nav>
-<style>
-   a:hover {
-      @apply hover:text-gray-500 dark:hover:text-gray-400;
-   }
-   ul {
-      animation: nav-shadown 1s linear both;
-      animation-timeline: scroll();
-      animation-range: 0 100px;
-   }
-
-   @keyframes nav-shadown {
-      to {
-         background-color: rgba(255, 255, 255, 0.2);
-         box-shadow:
-            0 10px 15px -3px rgba(0, 0, 0, 0.1),
-            0 4px 6px -2px rgba(0, 0, 0, 0.05);
-         border: 1px solid rgba(255, 255, 255, 0.1);
-         backdrop-filter: blur(8px);
-      }
-   }
-
-   .dark ul {
-      animation: nav-shadown-dark 1s linear both;
-      animation-timeline: scroll();
-      animation-range: 0 100px;
-   }
-
-   @keyframes nav-shadown-dark {
-      to {
-         background-color: rgba(31, 41, 55, 0.9);
-         box-shadow:
-            0 10px 15px -3px rgba(0, 0, 0, 0.1),
-            0 4px 6px -2px rgba(0, 0, 0, 0.05);
-         border: 1px solid rgba(255, 255, 255, 0.1);
-         backdrop-filter: blur(8px);
-      }
-   }
-</style>

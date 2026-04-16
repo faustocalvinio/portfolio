@@ -23,12 +23,12 @@ const { lang } = Astro.props;
 ---
 
 <SectionContainer>
-   <div class="flex gap-3 items-center text-black dark:text-white">
+   <div class="flex gap-3 items-center text-gray-900 dark:text-white mb-8">
       <SkillsIcon />
       <SectionTitle title={`${lang === "es" ? "Stack tecnológico" : "Tech Stack"}`} />
    </div>
    <div
-      class="skillWrapper mt-6 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 justify-between"
+      class="skillWrapper grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-3 md:gap-4 max-w-[800px]"
    >
       <SkillCard key="React" name="React" brandColor="#61DAFB">
          <ReactBig slot="icon" />
@@ -85,19 +85,3 @@ const { lang } = Astro.props;
       </SkillCard>
    </div>
 </SectionContainer>
-<style>
-   .SkillsSection {
-      @apply rounded-lg bg-gray-900 p-4;
-   }
-   .skillWrapper {
-      --min-inline-size: 100px;
-
-      max-inline-size: 800px;
-      padding: 16px;
-      border-radius: 8px;
-      overflow: hidden;
-      transition: border-color var(--theme-transition-duration);
-      justify-content: center;
-      background-color: var(--color-background);
-   }
-</style>

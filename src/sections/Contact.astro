@@ -43,65 +43,63 @@ const texts = CONTACT_TEXTS[lang] || CONTACT_TEXTS.es;
 ---
 
 <SectionContainer id="contact">
-   <div class="flex gap-3 items-center text-black dark:text-white mb-6">
+   <div class="flex gap-3 items-center text-gray-900 dark:text-white mb-8">
       <ContactIcon />
       <SectionTitle title={texts.title} />
    </div>
 
-   <div class="max-w-4xl mx-auto">
+   <div class="max-w-4xl">
       <!-- Descripción -->
-      <div class="mb-8">
+      <div class="mb-10">
          <p
-            class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed text-left"
+            class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed"
          >
             {texts.description}
          </p>
       </div>
 
       <!-- Grid de contacto -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
          <!-- Email -->
          <div
-            class="bg-white dark:bg-transparent rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300 group"
+            class="rounded-xl p-5 md:p-6 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-200 hover:shadow-sm bg-white/50 dark:bg-gray-900/30"
          >
             <div class="flex items-center gap-4 mb-4">
                <div
-                  class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center  transition-transform duration-300"
+                  class="w-10 h-10 bg-blue-50 dark:bg-blue-900/30 rounded-lg flex items-center justify-center"
                >
-                  <Mail class="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                  <Mail class="w-5 h-5 text-blue-600 dark:text-blue-400" />
                </div>
                <div>
-                  <h4 class="font-semibold text-gray-900 dark:text-white">
+                  <h4 class="font-semibold text-gray-900 dark:text-white text-sm">
                      Email
                   </h4>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                  <p class="text-sm text-gray-500 dark:text-gray-500">
                      faustocalvino@gmail.com
                   </p>
                </div>
             </div>
-            <div class="flex gap-2">
-               <LinkButton href="mailto:faustocalvino@gmail.com">
-                  <Mail class="w-4 h-4" />
-                  {texts.email}
-               </LinkButton>
-            </div>
+            <LinkButton href="mailto:faustocalvino@gmail.com">
+               <Mail class="w-4 h-4" />
+               {texts.email}
+            </LinkButton>
          </div>
 
          <!-- LinkedIn -->
          <div
-            class="bg-white dark:bg-transparent rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300 group"
+            class="rounded-xl p-5 md:p-6 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-200 hover:shadow-sm bg-white/50 dark:bg-gray-900/30"
          >
             <div class="flex items-center gap-4 mb-4">
                <div
-                  class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center transition-transform duration-300"
+                  class="w-10 h-10 bg-blue-50 dark:bg-blue-900/30 rounded-lg flex items-center justify-center"
                >
-                  <LinkedIn class="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                  <LinkedIn class="w-5 h-5 text-blue-600 dark:text-blue-400" />
                </div>
                <div>
-                  <h4 class="font-semibold text-gray-900 dark:text-white">
+                  <h4 class="font-semibold text-gray-900 dark:text-white text-sm">
                      LinkedIn
                   </h4>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                  <p class="text-sm text-gray-500 dark:text-gray-500">
                      faustocalvinio
                   </p>
                </div>
@@ -114,19 +112,19 @@ const texts = CONTACT_TEXTS[lang] || CONTACT_TEXTS.es;
 
          <!-- GitHub -->
          <div
-            class="bg-white dark:bg-transparent rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300 group"
+            class="rounded-xl p-5 md:p-6 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-200 hover:shadow-sm bg-white/50 dark:bg-gray-900/30"
          >
             <div class="flex items-center gap-4 mb-4">
                <div
-                  class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center  transition-transform duration-300"
+                  class="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center"
                >
-                  <GitHub class="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                  <GitHub class="w-5 h-5 text-gray-700 dark:text-gray-300" />
                </div>
                <div>
-                  <h4 class="font-semibold text-gray-900 dark:text-white">
+                  <h4 class="font-semibold text-gray-900 dark:text-white text-sm">
                      GitHub
                   </h4>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                  <p class="text-sm text-gray-500 dark:text-gray-500">
                      faustocalvinio
                   </p>
                </div>
@@ -140,17 +138,17 @@ const texts = CONTACT_TEXTS[lang] || CONTACT_TEXTS.es;
          <!-- CV/Resume -->
          {
             lang === "es" ? (
-               <div class="bg-white dark:bg-transparent rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300 group">
+               <div class="rounded-xl p-5 md:p-6 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-200 hover:shadow-sm bg-white/50 dark:bg-gray-900/30">
                   <div class="flex items-center gap-4 mb-4">
-                     <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center  transition-transform duration-300">
-                        <Download class="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                     <div class="w-10 h-10 bg-emerald-50 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
+                        <Download class="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                      </div>
                      <div>
-                        <h4 class="font-semibold text-gray-900 dark:text-white">
+                        <h4 class="font-semibold text-gray-900 dark:text-white text-sm">
                            Curriculum Vitae
                         </h4>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">
-                           Ver mi currículum profesional en formato PDF
+                        <p class="text-sm text-gray-500 dark:text-gray-500">
+                           PDF profesional
                         </p>
                      </div>
                   </div>
@@ -160,17 +158,17 @@ const texts = CONTACT_TEXTS[lang] || CONTACT_TEXTS.es;
                   </LinkButton>
                </div>
             ) : (
-               <div class="bg-white dark:bg-transparent rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300 group">
+               <div class="rounded-xl p-5 md:p-6 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-all duration-200 hover:shadow-sm bg-white/50 dark:bg-gray-900/30">
                   <div class="flex items-center gap-4 mb-4">
-                     <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center  transition-transform duration-300">
-                        <Download class="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                     <div class="w-10 h-10 bg-emerald-50 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
+                        <Download class="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                      </div>
                      <div>
-                        <h4 class="font-semibold text-gray-900 dark:text-white">
+                        <h4 class="font-semibold text-gray-900 dark:text-white text-sm">
                            Resume
                         </h4>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">
-                           View my professional resume in PDF format
+                        <p class="text-sm text-gray-500 dark:text-gray-500">
+                           Professional PDF
                         </p>
                      </div>
                   </div>

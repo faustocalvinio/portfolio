@@ -5,13 +5,13 @@ interface Props {
 const { TEXTS } = Astro.props;
 ---
 
-<footer class="px-4 md:px-0 mx-auto max-w-[800px] mt-4 pb-4 text-center">
-  <p>
-    {TEXTS[0]}<a class="text-blue-800 dark:text-blue-400" href="https://porfolio.dev/"
-      target="_blank">porfolio.dev</a
+<footer class="px-4 md:px-0 mx-auto max-w-[900px] py-8 border-t border-gray-200 dark:border-gray-800">
+  <p class="text-center text-sm text-gray-500 dark:text-gray-500">
+    {TEXTS[0]}<a class="text-blue-600 dark:text-blue-400 hover:underline" href="https://porfolio.dev/"
+      target="_blank" rel="noopener noreferrer">porfolio.dev</a
     >.{TEXTS[1]}<a
-      class="text-blue-800 dark:text-blue-400"
-      href="https://github.com/faustocalvinio/fausto-portfolio">{TEXTS[2]}</a
+      class="text-blue-600 dark:text-blue-400 hover:underline"
+      href="https://github.com/faustocalvinio/fausto-portfolio" target="_blank" rel="noopener noreferrer">{TEXTS[2]}</a
     >.
   </p>
 </footer>

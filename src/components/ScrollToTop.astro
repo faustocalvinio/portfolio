@@ -4,7 +4,6 @@
 
 <button
    id="scrollToTopBtn"
-   aria-label="Scroll to top"
    style="transform: translateY(20px);transition: opacity 0.3s ease, transform 0.3s ease"
    class="block fixed bottom-6 right-6 p-2.5 opacity-0 border-none rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 z-20"
 >
@@ -28,6 +27,10 @@
       // Remover listeners existentes si los hay
       scrollToTopBtn.replaceWith(scrollToTopBtn.cloneNode(true));
       const newScrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      // Set i18n aria-label
+      const lang = document.documentElement.lang;
+      newScrollToTopBtn.setAttribute("aria-label", lang === "es" ? "Volver arriba" : "Scroll to top");
 
       // Función para manejar el scroll
       function handleScroll() {

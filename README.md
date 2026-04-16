@@ -6,7 +6,7 @@ Welcome to my personal portfolio website! I'm Fausto, a full-stack web developer
 
 This is a personal project to showcase my experience, projects, and journey as a self-taught developer. The portfolio is built with a clean and minimal design to highlight clarity, professionalism, and accessibility.
 
-![Screenshot of Fausto's Portfolio](https://facal.me/ss-portfolio-en.jpeg)
+![Screenshot of Fausto's Portfolio](https://facal.space/ss-portfolio-en.jpeg)
 
 ## 🧰 Tech Stack
 
